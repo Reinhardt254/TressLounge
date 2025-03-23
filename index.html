@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+   , initial-scale=1.0"
+    />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="column left">
+        <div class="logo">
+          <img src="/images/logo.png" alt="logo" />
+        </div>
+      </div>
+      <div class="column right">
+        <div class="menu">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Academy</a></li>
+            <li><a href="#">Franchise</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">TRESS LOUNGE</h1>
+        <h2 class="hero-subtitle">FIND YOUR STYLE</h2>
+      </div>
+
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="slide"><img src="/images/1.png" alt=""></div>
+          <div class="slide"><img src="/images/2.png" alt=""></div>
+          <div class="slide"><img src="/images/3.png" alt=""></div>
+          <div class="slide"><img src="/images/4.png" alt=""></div>
+          <div class="slide"><img src="/images/5.png" alt=""></div>
+          <div class="slide"><img src="/images/3.png" alt=""></div>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const track = document.querySelector(".carousel-track");
+          const slides = Array.from(track.children);
+
+          // Duplicate slides for seamless loop
+          slides.forEach((slide) => {
+            let clone = slide.cloneNode(true);
+            track.appendChild(clone);
+          });
+        });
+      </script>
+
+      <div class="section">
+         <div class="container">
+            <div class="column">
+               <h2>OUR SERVICES</h2>
+               <p>TRESS LOUNGE OFFERS A WHOLE RANGE OF HAIR & BEAUTY SERVICES TO MAKE YOU LOOK JUST THE WAY YOU WANT. OOZING WITH THE TOP RATE SERVICES AND PRODUCTS, IT HAS BECOME A PREFERRED CHOICE OF THE PEOPLE OF THIS REGION.</p>
+               <button>VIEW ALL SERVICES</button>
+            </div>
+            <div class="column img">
+               <div class="image-wrapper">
+                  <img src="/images/4.png" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </body>
+</html>
