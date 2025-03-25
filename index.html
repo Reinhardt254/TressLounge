@@ -45,27 +45,88 @@
           <h2 class="hero-subtitle">FIND YOUR STYLE</h2>
         </div>
 
-        <div class="carousel">
-          <div class="carousel-track">
-            <div class="slide"><img src="/images/1.png" alt="" /></div>
-            <div class="slide"><img src="/images/2.png" alt="" /></div>
-            <div class="slide"><img src="/images/3.png" alt="" /></div>
-            <div class="slide"><img src="/images/4.png" alt="" /></div>
-            <div class="slide"><img src="/images/5.png" alt="" /></div>
-            <div class="slide"><img src="/images/3.png" alt="" /></div>
+        <div class="hero-slider">
+          <div class="hero-slider-track">
+            <div class="hero-slide">
+              <div class="card1"><img src="/images/1.png" alt="" /></div>
+            </div>
+            <div class="hero-slide">
+              <div class="card1"><img src="/images/2.png" alt="" /></div>
+            </div>
+            <div class="hero-slide">
+              <div class="card1"><img src="/images/3.png" alt="" /></div>
+            </div>
+            <div class="hero-slide">
+              <div class="card1"><img src="/images/4.png" alt="" /></div>
+            </div>
+            <div class="hero-slide">
+              <div class="card1"><img src="/images/5.png" alt="" /></div>
+            </div>
+            <div class="hero-slide">
+              <div class="card1"><img src="/images/3.png" alt="" /></div>
+            </div>
           </div>
         </div>
 
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const track = document.querySelector(".carousel-track");
-            const slides = Array.from(track.children);
+        <style>
+          .hero-slider {
+            width: 100%;
+            padding: 2rem 0;
+            overflow: hidden;
+            position: relative;
+          }
 
-            // Duplicate slides for seamless loop
-            slides.forEach((slide) => {
-              let clone = slide.cloneNode(true);
-              track.appendChild(clone);
-            });
+          .hero-slider-track {
+            display: flex;
+            gap: 30px;
+            animation: scroll 20s linear infinite;
+            width: fit-content;
+          }
+
+          .hero-slide {
+            flex: 0 0 auto;
+            width: auto;
+            height: 450px;
+            overflow: hidden;
+          }
+
+          .hero-slide .card1 {
+            width: 400px;
+            height: 100%;
+          }
+
+          .hero-slide .card1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        </style>
+
+        <script>
+          // Clone slides for seamless loop
+          const track = document.querySelector('.hero-slider-track');
+          const slides = [...track.children];
+          
+          // Clone all slides and append them
+          slides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            track.appendChild(clone);
+          });
+
+          // Add event listener to reset animation smoothly
+          track.addEventListener('animationend', () => {
+            track.style.animation = 'none';
+            track.offsetHeight; // Trigger reflow
+            track.style.animation = null;
           });
         </script>
       </section>
@@ -91,9 +152,12 @@
                 <div class="slide"><img src="/images/4.png" alt="" /></div>
                 <div class="slide"><img src="/images/5.png" alt="" /></div>
               </div>
-              <button class="nav-btn prev-btn">‹</button>
-              <button class="nav-btn next-btn">›</button>
-              <div class="pagination"></div>
+
+              <div class="navigation-slide">
+                <button class="nav-btn prev-btn">‹</button>
+                <div class="pagination"></div>
+                <button class="nav-btn next-btn">›</button>
+              </div>
             </div>
           </div>
         </div>
@@ -248,9 +312,148 @@
           </div>
 
           <div class="column img">
-            <div class="image-wrapper">
-              <img src="/images/4.png" alt="" />
+            <div class="franchise-slider-container">
+              <div class="franchise-slider">
+                <div class="franchise-slider-track fast">
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/1.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/2.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/3.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/4.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/5.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/3.png" alt="" /></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="franchise-slider">
+                <div class="franchise-slider-track slow">
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/5.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/4.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/3.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/2.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/1.png" alt="" /></div>
+                  </div>
+                  <div class="franchise-slide">
+                    <div class="card2"><img src="/images/3.png" alt="" /></div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <style>
+              .franchise-slider {
+                width: 100%;
+                padding: 10px 0;
+
+                position: relative;
+              }
+
+              .franchise-slider-track {
+                display: flex;
+                gap: 10px;
+                width: fit-content;
+              }
+
+              .franchise-slider-track.fast {
+                animation: scrollFast 20s linear infinite;
+              }
+
+              .franchise-slider-track.slow {
+                animation: scrollSlow 20s linear infinite;
+              }
+
+              .franchise-slide {
+                flex: 0 0 auto;
+                width: auto;
+                height: 220px;
+                overflow: hidden;
+                border-radius: 10px;
+              }
+
+              .franchise-slide .card2 {
+                width: 250px;
+                height: 100%;
+              }
+
+              .franchise-slide .card2 img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+
+              @keyframes scrollFast {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(-50%);
+                }
+              }
+
+              @keyframes scrollSlow {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(-50%);
+                }
+              }
+            </style>
+
+            <script>
+              // Clone slides for seamless loop - fast track
+              const trackFast = document.querySelector('.franchise-slider-track.fast');
+              const slidesFast = [...trackFast.children];
+              
+              slidesFast.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                trackFast.appendChild(clone);
+              });
+
+              // Add event listener to reset animation smoothly - fast track
+              trackFast.addEventListener('animationend', () => {
+                trackFast.style.animation = 'none';
+                trackFast.offsetHeight; // Trigger reflow
+                trackFast.style.animation = null;
+              });
+
+              // Clone slides for seamless loop - slow track
+              const trackSlow = document.querySelector('.franchise-slider-track.slow');
+              const slidesSlow = [...trackSlow.children];
+              
+              slidesSlow.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                trackSlow.appendChild(clone);
+              });
+
+              // Add event listener to reset animation smoothly - slow track
+              trackSlow.addEventListener('animationend', () => {
+                trackSlow.style.animation = 'none';
+                trackSlow.offsetHeight; // Trigger reflow
+                trackSlow.style.animation = null;
+              });
+            </script>
+
           </div>
         </div>
       </section>
@@ -267,48 +470,46 @@
             </p>
           </div>
 
-          <div class="row scroll-container">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img src="/images/1.png" alt="" />
-                  </div>
+          <div class="swiper-container works-swiper">
+            <div class="swiper-wrapper works-swiper-wrapper">
+              <div class="swiper-slide works-swiper-slide">
+                <div class="card works-swiper-slide-card">
+                  <img src="/images/1.png" alt="" />
                 </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img src="/images/2.png" alt="" />
-                  </div>
+              </div>
+              <div class="swiper-slide works-swiper-slide">
+                <div class="card works-swiper-slide-card">
+                  <img src="/images/2.png" alt="" />
                 </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img src="/images/3.png" alt="" />
-                  </div>
+              </div>
+              <div class="swiper-slide works-swiper-slide">
+                <div class="card works-swiper-slide-card">
+                  <img src="/images/3.png" alt="" />
                 </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img src="/images/4.png" alt="" />
-                  </div>
+              </div>
+              <div class="swiper-slide works-swiper-slide">
+                <div class="card works-swiper-slide-card">
+                  <img src="/images/4.png" alt="" />
                 </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img src="/images/1.png" alt="" />
-                  </div>
+              </div>
+              <div class="swiper-slide works-swiper-slide">
+                <div class="card works-swiper-slide-card">
+                  <img src="/images/1.png" alt="" />
                 </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img src="/images/2.png" alt="" />
-                  </div>
+              </div>
+              <div class="swiper-slide works-swiper-slide">
+                <div class="card works-swiper-slide-card">
+                  <img src="/images/2.png" alt="" />
                 </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img src="/images/3.png" alt="" />
-                  </div>
+              </div>
+              <div class="swiper-slide works-swiper-slide">
+                <div class="card works-swiper-slide-card">
+                  <img src="/images/3.png" alt="" />
                 </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img src="/images/4.png" alt="" />
-                  </div>
+              </div>
+              <div class="swiper-slide works-swiper-slide">
+                <div class="card works-swiper-slide-card">
+                  <img src="/images/4.png" alt="" />
                 </div>
               </div>
             </div>
@@ -319,7 +520,7 @@
 
           <!-- Initialize Swiper -->
           <script>
-            const swiper = new Swiper(".swiper-container", {
+            const swiper = new Swiper(".works-swiper", {
               slidesPerView: "auto",
               spaceBetween: 30,
               loop: true,
@@ -330,7 +531,7 @@
               },
               freeMode: true,
               freeModeMomentum: false,
-              allowTouchMove: true, // Enable touch events
+              allowTouchMove: true,
             });
           </script>
         </div>
