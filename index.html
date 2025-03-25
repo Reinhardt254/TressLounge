@@ -14,6 +14,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Marcellus+SC&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav>
@@ -71,9 +78,17 @@
         <style>
           .hero-slider {
             width: 100%;
-            padding: 2rem 0;
+            height: 100%;
+            padding: 2rem 0 2rem 0;
             overflow: hidden;
-            position: relative;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 3rem;
+
+            display: flex;
+            align-items: end;
+            background-color: rgba(0, 0, 0, 0.781);
           }
 
           .hero-slider-track {
@@ -113,22 +128,30 @@
 
         <script>
           // Clone slides for seamless loop
-          const track = document.querySelector('.hero-slider-track');
+          const track = document.querySelector(".hero-slider-track");
           const slides = [...track.children];
-          
+
           // Clone all slides and append them
-          slides.forEach(slide => {
+          slides.forEach((slide) => {
             const clone = slide.cloneNode(true);
             track.appendChild(clone);
           });
 
           // Add event listener to reset animation smoothly
-          track.addEventListener('animationend', () => {
-            track.style.animation = 'none';
+          track.addEventListener("animationend", () => {
+            track.style.animation = "none";
             track.offsetHeight; // Trigger reflow
             track.style.animation = null;
           });
         </script>
+
+        <div class="overlay-home">
+          <div class="top"></div>
+          <div class="cards-container">
+
+          </div>
+          <div class="bottom"></div>
+        </div>
       </section>
 
       <section class="section servicess">
@@ -154,9 +177,9 @@
               </div>
 
               <div class="navigation-slide">
-                <button class="nav-btn prev-btn">‹</button>
+                <button class="nav-btn prev-btn"><img src="/images/left.png" alt=""></button>
                 <div class="pagination"></div>
-                <button class="nav-btn next-btn">›</button>
+                <button class="nav-btn next-btn"><img src="/images/right.png" alt=""></button>
               </div>
             </div>
           </div>
@@ -335,7 +358,7 @@
                   </div>
                 </div>
               </div>
-  
+
               <div class="franchise-slider">
                 <div class="franchise-slider-track slow">
                   <div class="franchise-slide">
@@ -422,38 +445,98 @@
 
             <script>
               // Clone slides for seamless loop - fast track
-              const trackFast = document.querySelector('.franchise-slider-track.fast');
+              const trackFast = document.querySelector(
+                ".franchise-slider-track.fast"
+              );
               const slidesFast = [...trackFast.children];
-              
-              slidesFast.forEach(slide => {
+
+              slidesFast.forEach((slide) => {
                 const clone = slide.cloneNode(true);
                 trackFast.appendChild(clone);
               });
 
               // Add event listener to reset animation smoothly - fast track
-              trackFast.addEventListener('animationend', () => {
-                trackFast.style.animation = 'none';
+              trackFast.addEventListener("animationend", () => {
+                trackFast.style.animation = "none";
                 trackFast.offsetHeight; // Trigger reflow
                 trackFast.style.animation = null;
               });
 
               // Clone slides for seamless loop - slow track
-              const trackSlow = document.querySelector('.franchise-slider-track.slow');
+              const trackSlow = document.querySelector(
+                ".franchise-slider-track.slow"
+              );
               const slidesSlow = [...trackSlow.children];
-              
-              slidesSlow.forEach(slide => {
+
+              slidesSlow.forEach((slide) => {
                 const clone = slide.cloneNode(true);
                 trackSlow.appendChild(clone);
               });
 
               // Add event listener to reset animation smoothly - slow track
-              trackSlow.addEventListener('animationend', () => {
-                trackSlow.style.animation = 'none';
+              trackSlow.addEventListener("animationend", () => {
+                trackSlow.style.animation = "none";
                 trackSlow.offsetHeight; // Trigger reflow
                 trackSlow.style.animation = null;
               });
             </script>
+          </div>
+        </div>
+      </section>
 
+      <section class="section shop">
+        <img class="right-img" src="/images/k.png" alt="" />
+
+        <div class="container">
+          <div class="row">
+            <h2>SHOP</h2>
+            <p>
+              Shop redesigned and reformulated hair care <br />
+              products of kerastase
+            </p>
+          </div>
+
+          <div class="row left">
+            <div class="column">
+              <div class="card">
+                <div class="image-container">
+                  <img src="/images/prod1.png" alt="" />
+                  <img class="elipse" src="/images/ellipse 2.png" alt="" />
+                </div>
+                <h3>KERASTASE</h3>
+                <p>BANE REGENERANT</p>
+                <button>BUY NOW</button>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img src="/images/prod2.png" alt="" />
+                  <img class="elipse" src="/images/ellipse 2.png" alt="" />
+                </div>
+                <h3>KERASTASE</h3>
+                <p>EUXIR ULTIMATE</p>
+                <button>BUY NOW</button>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img src="/images/prod3.png" alt="" />
+                  <img class="elipse" src="/images/ellipse 2.png" alt="" />
+                </div>
+                <h3>KERASTASE</h3>
+                <p>CURE MANIFESTO</p>
+                <button>BUY NOW</button>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="content">
+                <img src="/images/kerastase.png" alt="" />
+                <p>
+                  Shop redesigned and reformulated hair care products of
+                  kerastase
+                </p>
+                <button>VIEW ALL PRODUCTS</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
