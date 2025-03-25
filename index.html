@@ -9,6 +9,11 @@
     />
     <title>Home</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <nav>
@@ -65,7 +70,7 @@
         </script>
       </section>
 
-      <section class="section">
+      <section class="section servicess">
         <div class="container">
           <div class="column">
             <h2>OUR SERVICES</h2>
@@ -78,12 +83,152 @@
             <button>VIEW ALL SERVICES</button>
           </div>
           <div class="column img">
-            <div class="image-wrapper">
-              <img src="/images/4.png" alt="" />
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slide"><img src="/images/1.png" alt="" /></div>
+                <div class="slide"><img src="/images/2.png" alt="" /></div>
+                <div class="slide"><img src="/images/3.png" alt="" /></div>
+                <div class="slide"><img src="/images/4.png" alt="" /></div>
+                <div class="slide"><img src="/images/5.png" alt="" /></div>
+              </div>
+              <button class="nav-btn prev-btn">‹</button>
+              <button class="nav-btn next-btn">›</button>
+              <div class="pagination"></div>
             </div>
           </div>
         </div>
       </section>
+
+      <script>
+        class Slider {
+          constructor(container) {
+            this.container = container;
+            this.slides = [...container.querySelectorAll(".slide")];
+            this.totalSlides = this.slides.length;
+            this.currentIndex = 0;
+
+            // Create navigation buttons
+            this.prevBtn = container.querySelector(".prev-btn");
+            this.nextBtn = container.querySelector(".next-btn");
+
+            // Create pagination
+            this.pagination = container.querySelector(".pagination");
+            this.createPagination();
+
+            // Clone slides for infinite effect
+            this.cloneSlides();
+
+            // Initialize
+            this.addEventListeners();
+            this.updateSlides();
+            this.startAutoplay();
+          }
+
+          cloneSlides() {
+            // Clone first and last slides for smooth infinite loop
+            const firstClone = this.slides[0].cloneNode(true);
+            const lastClone = this.slides[this.totalSlides - 1].cloneNode(true);
+            this.container.querySelector(".slider").appendChild(firstClone);
+            this.container
+              .querySelector(".slider")
+              .insertBefore(lastClone, this.slides[0]);
+            this.slides = [...this.container.querySelectorAll(".slide")];
+          }
+
+          createPagination() {
+            for (let i = 0; i < this.totalSlides; i++) {
+              const dot = document.createElement("div");
+              dot.classList.add("pagination-dot");
+              dot.addEventListener("click", () => this.goToSlide(i));
+              this.pagination.appendChild(dot);
+            }
+          }
+
+          updateSlides() {
+            this.slides.forEach((slide, index) => {
+              slide.classList.remove(
+                "active",
+                "prev-2",
+                "prev-1",
+                "next-1",
+                "next-2"
+              );
+
+              const position =
+                (index - this.currentIndex + this.totalSlides) %
+                this.totalSlides;
+
+              if (position === 0) slide.classList.add("active");
+              else if (position === this.totalSlides - 2)
+                slide.classList.add("prev-2");
+              else if (position === this.totalSlides - 1)
+                slide.classList.add("prev-1");
+              else if (position === 1) slide.classList.add("next-1");
+              else if (position === 2) slide.classList.add("next-2");
+            });
+
+            // Update pagination
+            const dots = [...this.pagination.children];
+            dots.forEach((dot, index) => {
+              dot.classList.toggle("active", index === this.currentIndex);
+            });
+          }
+
+          next() {
+            this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
+            this.updateSlides();
+          }
+
+          prev() {
+            this.currentIndex =
+              (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
+            this.updateSlides();
+          }
+
+          goToSlide(index) {
+            this.currentIndex = index;
+            this.updateSlides();
+          }
+
+          addEventListeners() {
+            this.nextBtn.addEventListener("click", () => this.next());
+            this.prevBtn.addEventListener("click", () => this.prev());
+
+            // Touch events
+            let touchStartX = 0;
+            this.container.addEventListener("touchstart", (e) => {
+              touchStartX = e.touches[0].clientX;
+            });
+
+            this.container.addEventListener("touchend", (e) => {
+              const touchEndX = e.changedTouches[0].clientX;
+              const diff = touchStartX - touchEndX;
+
+              if (Math.abs(diff) > 50) {
+                if (diff > 0) this.next();
+                else this.prev();
+              }
+            });
+          }
+
+          startAutoplay() {
+            let autoplayInterval = setInterval(() => this.next(), 3000);
+
+            this.container.addEventListener("mouseenter", () => {
+              clearInterval(autoplayInterval);
+            });
+
+            this.container.addEventListener("mouseleave", () => {
+              autoplayInterval = setInterval(() => this.next(), 3000);
+            });
+          }
+        }
+
+        // Initialize slider
+        document.addEventListener("DOMContentLoaded", () => {
+          new Slider(document.querySelector(".slider-container"));
+        });
+      </script>
 
       <section class="section franchise">
         <div class="container">
@@ -93,7 +238,7 @@
               Go Into Business With A Established Hairdressing Super brand And A
               Visionary Business Owner.
               <br />
-              Steps To Partner With The Most Premium Salon Tess lounge Welcomes
+              Steps To Partner With The Most Premium SalonTess lounge Welcomes
               Prospective Franchise Partners That Share Our Vision And Are
               Motivated To Invest In A Concept That Strives For Mutual Success.
             </p>
@@ -110,14 +255,97 @@
         </div>
       </section>
 
+      <section class="section works">
+        <div class="container">
+          <div class="row text-section">
+            <h2>OUR WORKS</h2>
+            <p>
+              Experience luxury transformations with TressLounge, where top
+              celebrities trust us for their signature looks. Our expert
+              stylists bring glamour and elegance to every style, making you
+              shine like a star.
+            </p>
+          </div>
+
+          <div class="row scroll-container">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="/images/1.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="/images/2.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="/images/3.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="/images/4.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="/images/1.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="/images/2.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="/images/3.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="/images/4.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+          <!-- Initialize Swiper -->
+          <script>
+            const swiper = new Swiper(".swiper-container", {
+              slidesPerView: "auto",
+              spaceBetween: 30,
+              loop: true,
+              speed: 3000,
+              autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+              },
+              freeMode: true,
+              freeModeMomentum: false,
+              allowTouchMove: true, // Enable touch events
+            });
+          </script>
+        </div>
+      </section>
+
+      <div class="section">
+        <div class="separator"></div>
+      </div>
+
       <footer>
         <div class="container">
           <div class="column">
             <div class="logo">
               <img src="/images/footerlogo.png" alt="logo" />
-              <p>
-                A FAMILY SALON
-              </p>
+              <p>A FAMILY SALON</p>
             </div>
 
             <div class="copyright">
@@ -151,13 +379,22 @@
           </div>
 
           <div class="column">
-            <h2>CONTACT US</h2>
-            <h2>Make you look just the way you want.</h2>
-            <div class="contact-info">
-              <p>Tress Lounge, SCO 30-31, Sector 8C, Madhya Marg, Chandigarh</p>
-              <p>Phone : 0172-4656581</p>
-              <p>Email : Contact@tresslounge.com</p>
-              <p>Web: www.tresslounge.com</p>
+            <div class="column-content">
+              <h2>
+                Make you look just <br />
+                the way you want.
+              </h2>
+              <div class="contact-info">
+                <p>
+                  <span
+                    >Tress Lounge, SCO 30-31, Sector 8C, Madhya Marg,
+                    Chandigarh</span
+                  >
+                </p>
+                <p><span>Phone :</span> 0172-4656581</p>
+                <p><span>Email :</span> Contact@tresslounge.com</p>
+                <p><span>Web:</span> www.tresslounge.com</p>
+              </div>
             </div>
           </div>
         </div>
