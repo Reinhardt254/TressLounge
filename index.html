@@ -33,50 +33,135 @@
       </div>
     </nav>
 
-    <div class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">TRESS LOUNGE</h1>
-        <h2 class="hero-subtitle">FIND YOUR STYLE</h2>
-      </div>
-
-      <div class="carousel">
-        <div class="carousel-track">
-          <div class="slide"><img src="/images/1.png" alt=""></div>
-          <div class="slide"><img src="/images/2.png" alt=""></div>
-          <div class="slide"><img src="/images/3.png" alt=""></div>
-          <div class="slide"><img src="/images/4.png" alt=""></div>
-          <div class="slide"><img src="/images/5.png" alt=""></div>
-          <div class="slide"><img src="/images/3.png" alt=""></div>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">TRESS LOUNGE</h1>
+          <h2 class="hero-subtitle">FIND YOUR STYLE</h2>
         </div>
-      </div>
 
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const track = document.querySelector(".carousel-track");
-          const slides = Array.from(track.children);
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="slide"><img src="/images/1.png" alt="" /></div>
+            <div class="slide"><img src="/images/2.png" alt="" /></div>
+            <div class="slide"><img src="/images/3.png" alt="" /></div>
+            <div class="slide"><img src="/images/4.png" alt="" /></div>
+            <div class="slide"><img src="/images/5.png" alt="" /></div>
+            <div class="slide"><img src="/images/3.png" alt="" /></div>
+          </div>
+        </div>
 
-          // Duplicate slides for seamless loop
-          slides.forEach((slide) => {
-            let clone = slide.cloneNode(true);
-            track.appendChild(clone);
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const track = document.querySelector(".carousel-track");
+            const slides = Array.from(track.children);
+
+            // Duplicate slides for seamless loop
+            slides.forEach((slide) => {
+              let clone = slide.cloneNode(true);
+              track.appendChild(clone);
+            });
           });
-        });
-      </script>
+        </script>
+      </section>
 
-      <div class="section">
-         <div class="container">
-            <div class="column">
-               <h2>OUR SERVICES</h2>
-               <p>TRESS LOUNGE OFFERS A WHOLE RANGE OF HAIR & BEAUTY SERVICES TO MAKE YOU LOOK JUST THE WAY YOU WANT. OOZING WITH THE TOP RATE SERVICES AND PRODUCTS, IT HAS BECOME A PREFERRED CHOICE OF THE PEOPLE OF THIS REGION.</p>
-               <button>VIEW ALL SERVICES</button>
+      <section class="section">
+        <div class="container">
+          <div class="column">
+            <h2>OUR SERVICES</h2>
+            <p>
+              TRESS LOUNGE OFFERS A WHOLE RANGE OF HAIR & BEAUTY SERVICES TO
+              MAKE YOU LOOK JUST THE WAY YOU WANT. OOZING WITH THE TOP RATE
+              SERVICES AND PRODUCTS, IT HAS BECOME A PREFERRED CHOICE OF THE
+              PEOPLE OF THIS REGION.
+            </p>
+            <button>VIEW ALL SERVICES</button>
+          </div>
+          <div class="column img">
+            <div class="image-wrapper">
+              <img src="/images/4.png" alt="" />
             </div>
-            <div class="column img">
-               <div class="image-wrapper">
-                  <img src="/images/4.png" alt="">
-               </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section franchise">
+        <div class="container">
+          <div class="column">
+            <h2>BUY <br />FRANCHISE</h2>
+            <p>
+              Go Into Business With A Established Hairdressing Super brand And A
+              Visionary Business Owner.
+              <br />
+              Steps To Partner With The Most Premium Salon Tess lounge Welcomes
+              Prospective Franchise Partners That Share Our Vision And Are
+              Motivated To Invest In A Concept That Strives For Mutual Success.
+            </p>
+            <button>KNOW MORE</button>
+            <p>LOCATIONS ON WHICH WE SERVE</p>
+            <div class="locations">SEE LOCATIONS</div>
+          </div>
+
+          <div class="column img">
+            <div class="image-wrapper">
+              <img src="/images/4.png" alt="" />
             </div>
-         </div>
-      </div>
-    </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="column">
+            <div class="logo">
+              <img src="/images/footerlogo.png" alt="logo" />
+              <p>
+                A FAMILY SALON
+              </p>
+            </div>
+
+            <div class="copyright">
+              <p>Copyright © 2025 Tress Lounge. All rights reserved.</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Academy</a></li>
+              <li><a href="#">Franchise</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+
+            <div class="socials">
+              <a href="#" class="icon">
+                <img src="/images/facebook.png" alt="" />
+              </a>
+              <a href="#" class="icon">
+                <img src="/images/instagram.png" alt="" />
+              </a>
+              <a href="#" class="icon">
+                <img src="/images/x.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <div class="column">
+            <h2>CONTACT US</h2>
+            <h2>Make you look just the way you want.</h2>
+            <div class="contact-info">
+              <p>Tress Lounge, SCO 30-31, Sector 8C, Madhya Marg, Chandigarh</p>
+              <p>Phone : 0172-4656581</p>
+              <p>Email : Contact@tresslounge.com</p>
+              <p>Web: www.tresslounge.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
