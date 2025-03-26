@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>   
+  <body>
     <nav>
       <div class="column left">
         <div class="logo">
@@ -157,7 +157,33 @@
         </section>
 
         <div class="overlay-home">
-          <div class="top"></div>
+          <div class="top">
+            <nav>
+              <div class="column left">
+                <div class="logo">
+                  <img src="/images/logo.png" alt="logo" />
+                </div>
+              </div>
+              <div class="column right">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blogs</a></li>
+                  </ul>
+                </div>
+              </div>
+        
+              <div class="button">
+                <button>BOOK NOW</button>
+              </div>
+            </nav>
+          </div>
           <div class="cards-containers">
             <div class="cards-slider">
               <div class="cards-slider-track">
@@ -183,12 +209,12 @@
             </div>
 
             <style>
-              .card-containers{
+              .card-containers {
                 max-height: 80vh;
               }
 
-              .overlay-home.active .cards-containers{
-                animation: overlayactive 3s ease;
+              .overlay-home.active .cards-containers .cards-slide .card1 {
+                animation: overlayactive 2s ease;
               }
 
               .cards-slider {
@@ -281,17 +307,15 @@
           const sectiontwo = document.querySelector(".sect-2");
           const sectionone = document.querySelector(".sect-1");
 
-
           mouse.addEventListener("click", () => {
-           overlayHome.classList.add("active");
-           subText.classList.add("active");
-           subtextmain.classList.add("active");
-           herocontent.classList.add("active");
-           title.classList.add("active");
-           sectiontwo.classList.add("active");
-           sectionone.classList.add("active");
+            overlayHome.classList.add("active");
+            subText.classList.add("active");
+            subtextmain.classList.add("active");
+            herocontent.classList.add("active");
+            title.classList.add("active");
+            sectiontwo.classList.add("active");
+            sectionone.classList.add("active");
           });
-          
         </script>
         <section class="section servicess">
           <div class="container">

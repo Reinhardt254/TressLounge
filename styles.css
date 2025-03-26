@@ -58,7 +58,7 @@ nav {
   background-color: #000;
 
   position: relative;
-  z-index: 50000000;
+  z-index: 5000;
 }
 
 nav .column.left {
@@ -150,11 +150,16 @@ nav .column.right .menu ul li a {
   box-sizing: border-box;
 
   z-index: 10000;
+
+  transition: 1s ease;
 }
 
 .overlay-home.active{
   top: calc(50px - 100%);
-  transition: 2s ease;
+  transition: 3s ease;
+  z-index: 10000;
+
+  animation: overlayactive 3s ease;
 }
 
 @keyframes overlayactive{
@@ -188,6 +193,15 @@ nav .column.right .menu ul li a {
   border-radius: 0 0 100% 100%;
   -webkit-border-radius: 0 0 100% 100%;
   -moz-border-radius: 0 0 100% 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-home .top nav{
+  width: 100vw;
+  background-color: #ffffff00;
 }
 
 .overlay-home .bottom {
@@ -258,7 +272,7 @@ nav .column.right .menu ul li a {
   flex-direction: column;
 
   padding: 0rem 0;
-  z-index: 1000;
+  z-index: 100000;
   position: relative;
 }
 
