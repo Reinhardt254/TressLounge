@@ -340,7 +340,7 @@ nav .column.right .menu ul li a {
   overflow: visible;
   z-index: 0;
 
-  animation: hero-title 5s ease;
+  animation: hero-title 3s ease;
   opacity: 30%;
 }
 
@@ -356,7 +356,7 @@ nav .column.right .menu ul li a {
 } */
 
 .hero .hero-content .hero-subtitle-2.active{
-  animation: hero-subtitle-2 5s ease;
+  animation: hero-subtitle-2 3s ease;
   opacity: 0;
 }
 
