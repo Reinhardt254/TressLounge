@@ -307,14 +307,40 @@
           const sectiontwo = document.querySelector(".sect-2");
           const sectionone = document.querySelector(".sect-1");
 
+          const handleScroll = () => {
+            if (sectionone.classList.contains("active")) {
+              if (window.scrollY === 0) {
+                mouse.style.display = "block"; // Show mouse
+                overlayHome.classList.add("overtop");
+                overlayHome.classList.remove("overtop-main");
+              } else {
+                overlayHome.classList.add("overtop-main");
+              }
+            } else {
+              mouse.style.display = "block"; // Hide mouse if sect-1 is not active
+            }
+          };
+
+          window.addEventListener("scroll", handleScroll);
+
           mouse.addEventListener("click", () => {
-            overlayHome.classList.add("active");
-            subText.classList.add("active");
-            subtextmain.classList.add("active");
-            herocontent.classList.add("active");
-            title.classList.add("active");
-            sectiontwo.classList.add("active");
-            sectionone.classList.add("active");
+            if (overlayHome.classList.contains("active")) {
+              overlayHome.classList.remove("active");
+              subText.classList.remove("active");
+              subtextmain.classList.remove("active");
+              herocontent.classList.remove("active");
+              title.classList.remove("active");
+              sectiontwo.classList.remove("active");
+              sectionone.classList.remove("active");
+            } else {
+              overlayHome.classList.add("active");
+              subText.classList.add("active");
+              subtextmain.classList.add("active");
+              herocontent.classList.add("active");
+              title.classList.add("active");
+              sectiontwo.classList.add("active");
+              sectionone.classList.add("active");
+            }
           });
         </script>
         <section class="section servicess">
