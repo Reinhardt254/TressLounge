@@ -58,7 +58,7 @@ nav {
   background-color: #000;
 
   position: relative;
-  z-index: 5000;
+  z-index: 50000000;
 }
 
 nav .column.left {
