@@ -174,10 +174,10 @@ nav .column.right .menu ul li a {
   transition: 0.8s ease !important;
 }
 
-/* .overtop-main{
+.overtop-main{
   top: -100% !important;
   transition: 0.3s ease !important;
-} */
+}
 
 @keyframes overlayactive{
   0%{

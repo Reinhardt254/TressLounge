@@ -310,8 +310,10 @@
           const handleScroll = () => {
             if (sectionone.classList.contains("active")) {
               if (window.scrollY === 0) {
+                overlayHome.classList.remove("overtop-main");
                 overlayHome.classList.add("overtop");
               } else {
+                overlayHome.classList.remove("overtop");
                 overlayHome.classList.add("overtop-main");
               }
             } else {
