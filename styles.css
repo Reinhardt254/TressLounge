@@ -154,7 +154,7 @@ nav .column.right .menu ul li a {
 
 .overlay-home.active{
   top: calc(50px - 100%);
-  transition: 3s ease;
+  transition: 2s ease;
 }
 
 @keyframes overlayactive{
@@ -340,7 +340,7 @@ nav .column.right .menu ul li a {
   overflow: visible;
   z-index: 0;
 
-  animation: hero-title 3s ease;
+  animation: hero-title 5s ease;
   opacity: 30%;
 }
 
@@ -356,7 +356,7 @@ nav .column.right .menu ul li a {
 } */
 
 .hero .hero-content .hero-subtitle-2.active{
-  animation: hero-subtitle-2 3s ease;
+  animation: hero-subtitle-2 5s ease;
   opacity: 0;
 }
 
@@ -372,7 +372,7 @@ nav .column.right .menu ul li a {
 @keyframes hero-title{
   0%{
     opacity: 100%;
-    top: 20vh;
+    top: 40vh;
   }
   100%{
     opacity: 30%;
