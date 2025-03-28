@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/franchise/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Marcellus+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="column left">
+        <div class="logo">
+          <img src="/images/logo.png" alt="logo" />
+        </div>
+      </div>
+      <div class="column right">
+        <div class="menu">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Academy</a></li>
+            <li><a href="#">Franchise</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="button">
+        <button>BOOK NOW</button>
+      </div>
+    </nav>
+    <main class="main-franchise">
+      <section class="layout">
+        <div class="container">
+          <div class="column">
+            <h1>
+              Own a Tress <br />
+              Lounge Luxury <br />
+              Salon
+            </h1>
+            <p>Franchise in Mississauga</p>
+
+            <p>
+              Join the fastest-growing luxury salon chain and secure a
+              high-revenue business opportunity.
+            </p>
+            <button>APPLY FOR FRANCHISE NOW</button>
+          </div>
+          <div class="column">
+            <div class="column img">
+              <div class="franchise-slider-container">
+                <div class="franchise-slider">
+                  <div class="franchise-slider-track fast">
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/2.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/3.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/4.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/5.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/3.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="franchise-slider">
+                  <div class="franchise-slider-track slow">
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/5.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/4.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/3.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/2.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/3.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <style>
+                .franchise-slider {
+                  width: 100%;
+                  padding: 10px 0;
+
+                  position: relative;
+                }
+
+                .franchise-slider-track {
+                  display: flex;
+                  gap: 10px;
+                  width: fit-content;
+                }
+
+                .franchise-slider-track.fast {
+                  animation: scrollFast 20s linear infinite;
+                }
+
+                .franchise-slider-track.slow {
+                  animation: scrollSlow 30s linear infinite;
+                }
+
+                .franchise-slide {
+                  flex: 0 0 auto;
+                  width: auto;
+                  height: 300px;
+                  overflow: hidden;
+                  border-radius: 10px;
+                }
+
+                .franchise-slide .card2 {
+                  width: 300px;
+                  height: 100%;
+                }
+
+                .franchise-slide .card2 img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+
+                @keyframes scrollFast {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-50%);
+                  }
+                }
+
+                @keyframes scrollSlow {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-50%);
+                  }
+                }
+              </style>
+
+              <script>
+                // Clone slides for seamless loop - fast track
+                const trackFast = document.querySelector(
+                  ".franchise-slider-track.fast"
+                );
+                const slidesFast = [...trackFast.children];
+
+                slidesFast.forEach((slide) => {
+                  const clone = slide.cloneNode(true);
+                  trackFast.appendChild(clone);
+                });
+
+                // Add event listener to reset animation smoothly - fast track
+                trackFast.addEventListener("animationend", () => {
+                  trackFast.style.animation = "none";
+                  trackFast.offsetHeight; // Trigger reflow
+                  trackFast.style.animation = null;
+                });
+
+                // Clone slides for seamless loop - slow track
+                const trackSlow = document.querySelector(
+                  ".franchise-slider-track.slow"
+                );
+                const slidesSlow = [...trackSlow.children];
+
+                slidesSlow.forEach((slide) => {
+                  const clone = slide.cloneNode(true);
+                  trackSlow.appendChild(clone);
+                });
+
+                // Add event listener to reset animation smoothly - slow track
+                trackSlow.addEventListener("animationend", () => {
+                  trackSlow.style.animation = "none";
+                  trackSlow.offsetHeight; // Trigger reflow
+                  trackSlow.style.animation = null;
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey">
+        <div class="container">
+          <div class="heading">
+            <h2 class="text-white">Start Your Franchise Journey Today</h2>
+            <p>FAQ</p>
+          </div>
+          <div class="grid">
+            <div class="column left">
+              <ul>
+                <li class="active">
+                  <div class="text-content">
+                    <h3 class="text-white">
+                      <span class="number">01</span>
+                      <span class="text"
+                        >How much does it cost to start a franchise?</span
+                    >
+                    </h3>
+                    <div class="plus">-</div>
+                  </div>
+                  <p>
+                    The cost of starting a franchise can vary widely depending
+                    on the franchise brand, location, size, and other factors.
+                    Generally, franchise fees range from a few thousand to tens
+                    of thousands of dollars.
+                  </p>
+                </li>
+                <li>
+                  <div class="text-content">
+                    <h3 class="text-white">
+                      <span class="number">02</span>
+                      <span class="text"
+                        >How much does it cost to start a franchise?</span
+                    >
+                    </h3>
+                    <div class="plus">+</div>
+                  </div>
+                  <p>
+                    The cost of starting a franchise can vary widely depending
+                    on the franchise brand, location, size, and other factors.
+                    Generally, franchise fees range from a few thousand to tens
+                    of thousands of dollars.
+                  </p>
+                </li>
+                <li>
+                  <div class="text-content">
+                    <h3 class="text-white">
+                      <span class="number">03</span>
+                      <span class="text"
+                        >How much does it cost to start a franchise?</span
+                    >
+                    </h3>
+                    <div class="plus">+</div>
+                  </div>
+                  <p>
+                    The cost of starting a franchise can vary widely depending
+                    on the franchise brand, location, size, and other factors.
+                    Generally, franchise fees range from a few thousand to tens
+                    of thousands of dollars.
+                  </p>
+                </li>
+                <li>
+                  <div class="text-content">
+                    <h3 class="text-white">
+                      <span class="number">04</span>
+                      <span class="text"
+                        >How much does it cost to start a franchise?</span
+                    >
+                  </h3>
+                  <div class="plus">+</div>
+                  </div>
+                  <p>
+                    The cost of starting a franchise can vary widely depending
+                    on the franchise brand, location, size, and other factors.
+                    Generally, franchise fees range from a few thousand to tens
+                    of thousands of dollars.
+                  </p>
+                </li>
+                <li>
+                  <div class="text-content">
+                    <h3 class="text-white">
+                      <span class="number">05</span>
+                      <span class="text"
+                        >How much does it cost to start a franchise?</span
+                      >
+                    </h3>
+                    <div class="plus">+</div>
+                  </div>
+                  <p>
+                    The cost of starting a franchise can vary widely depending
+                    on the franchise brand, location, size, and other factors.
+                    Generally, franchise fees range from a few thousand to tens
+                    of thousands of dollars.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <script>
+              const li = document.querySelectorAll(".journey .container .grid .column ul li");
+
+              li.forEach((item) => {
+                item.addEventListener("click", () => {
+                  item.classList.toggle("active");
+                  const plusIcon = item.querySelector('.plus');
+                  plusIcon.textContent = item.classList.contains('active') ? '-' : '+';
+                });
+              });
+            </script>
+            <div class="column right">
+              <div class="form">
+                <input type="text" placeholder="NAME" />
+                <input type="text" placeholder="E-MAIL" />
+                <input type="text" placeholder="PHONE NUMBER" />
+                <button>APPLY NOW AND GET THE CONSULTATION</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="invest">
+        <div class="container">
+          <div class="heading">
+            <h2>
+              <span class="text-white"> Why Invest in</span>
+              <br />
+              <span>Tress Lounge</span>
+            </h2>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <img src="/images/established.png" alt="" />
+              <p>Established luxury salon brand with a strong customer base.</p>
+            </div>
+            <div class="card">
+              <img src="/images/support.png" alt="" />
+              <p>Established luxury salon brand with a strong customer base.</p>
+            </div>
+            <div class="card">
+              <img src="/images/qual.png" alt="" />
+              <p>Established luxury salon brand with a strong customer base.</p>
+            </div>
+            <div class="card">
+              <img src="/images/transaction.png" alt="" />
+              <p>Established luxury salon brand with a strong customer base.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="luxury">
+        <div class="container">
+          <div class="heading">
+            <h2>
+              <span class="text-white">Step Into Luxury</span>
+              <br />
+              <span>Experience the Elegance of Tress Lounge</span>
+            </h2>
+          </div>
+
+          <div class="grid">
+            <div class="cards-container">
+              <div class="cards-content">
+                <div class="column">
+                  <img src="/images/01.png" alt="" />
+                </div>
+                <div class="column-grid">
+                  <div class="image-container">
+                    <img src="/images/01.png" alt="" />
+                  </div>
+                  <div class="image-container">
+                    <img src="/images/02.png" alt="" />
+                  </div>
+                  <div class="image-container">
+                    <img src="/images/03.png" alt="" />
+                  </div>
+                  <div class="image-container">
+                    <img src="/images/04.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <h3 class="text-white">Tress Lounge, Brampton</h3>
+              <div class="navigation">
+                <div class="nav-btn">
+                  <img src="/images/arrowleftmask.png" alt="" />
+                  <img src="/images/arrowrightmask.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="column">
+            <div class="logo">
+              <img src="/images/footerlogo.png" alt="logo" />
+              <p>A FAMILY SALON</p>
+            </div>
+
+            <div class="copyright">
+              <p>Copyright © 2025 Tress Lounge. All rights reserved.</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Academy</a></li>
+              <li><a href="#">Franchise</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+
+            <div class="socials">
+              <a href="#" class="icon">
+                <img src="/images/Facebook.png" alt="" />
+              </a>
+              <a href="#" class="icon">
+                <img src="/images/Instagram.png" alt="" />
+              </a>
+              <a href="#" class="icon">
+                <img src="/images/X.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="column-content">
+              <h2>
+                Make you look just <br />
+                the way you want.
+              </h2>
+              <div class="contact-info">
+                <p>
+                  <span
+                    >Tress Lounge, SCO 30-31, Sector 8C, Madhya Marg,
+                    Chandigarh</span
+                  >
+                </p>
+                <p><span>Phone :</span> 0172-4656581</p>
+                <p><span>Email :</span> Contact@tresslounge.com</p>
+                <p><span>Web:</span> www.tresslounge.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

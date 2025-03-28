@@ -1,0 +1,485 @@
+body {
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+}
+
+.main-franchise {
+  width: 100%;
+  height: 100%;
+}
+
+.main-franchise .layout {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-franchise .layout .container {
+  width: 90%;
+  max-width: 1200px;
+  height: 550px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+}
+
+.main-franchise .layout .container .column {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-franchise .layout .container .column.img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-franchise .layout .container .column h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.main-franchise .layout .container .column p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.main-franchise .layout .container .column button {
+  font-size: 1rem;
+}
+
+.franchise-slider-container {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+
+  position: absolute;
+  top: 300px;
+  right: 50px;
+  rotate: -60deg;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+/* -------------------------------------------------- */
+.journey {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10rem 0 5rem 0;
+}
+
+.journey .container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+}
+
+.journey .container .column {
+  width: 100%;
+  height: 100%;
+}
+
+.journey .container h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding-bottom: 2rem;
+}
+
+.journey .container .grid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 3rem;
+}
+
+.journey .container .grid .column {
+  width: 100%;
+  height: 100%;
+}
+
+.journey .container .grid .column .text-content {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+ 
+   height: 40px;
+ }
+
+.journey .container .grid .column h3 {
+   width: 100%;
+   height: 100%;
+  font-size: 1.1rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding-left: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.journey .container .grid .column ul{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: start;
+   gap: 1rem;
+}
+ 
+.journey .container .grid .column li{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: start;
+
+   border: 2px solid #152329;
+}
+
+
+
+.journey .container .grid .column .active {
+
+}
+
+.journey .container .grid .column p {
+  font-size: 1rem;
+  color: #fff;
+
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+
+  padding-left: 2.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.journey .container .grid .column .active p {
+  height: 100px;
+}
+
+.journey .container .grid .column .number {
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+
+  display: block;
+  padding-right: 1rem;
+}
+
+.journey .container .grid .column .text {
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+}
+
+.journey .container .grid .column .plus {
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #152329;
+  height: 40px;
+  width: 40px;
+  display: block;
+  border-radius: 0%;
+  padding: 0;
+
+  float: right;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.journey .container .grid .column .active .plus {
+  background-color: #F0CD50;
+  color: #fff;
+}
+
+.journey .container .grid .column.right{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+}
+
+.journey .container .grid .column.right .form{
+   width: 100%;
+   max-width: 400px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: start;
+   gap: 1rem;
+}
+
+.journey .container .grid .column.right .form input{
+   width: 100%;
+   height: 40px;
+   border: 2px solid #152329;
+   border-radius: 10px;
+   
+   padding: 0 1rem;
+}
+
+
+/* -------------------------------------------------------- */
+.invest {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5rem 0;
+}
+
+.invest .container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.invest .heading {
+  width: 100%;
+  height: auto;
+}
+
+.invest .heading h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.invest .heading h2 span:nth-child(1) {
+  color: #fff;
+  line-height: 2;
+}
+
+.invest .heading h2 span:nth-child(2) {
+  color: #fff;
+}
+
+.invest .grid {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.invest .grid .card {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.invest .grid .card img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.invest .grid .card p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------ */
+.luxury {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.luxury .container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+}
+
+.luxury .heading {
+  width: 100%;
+  height: 100%;
+}
+
+.luxury .heading h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.luxury .heading h2 span:nth-child(1) {
+  color: #fff;
+  line-height: 2;
+}
+
+.luxury .heading h2 span:nth-child(2) {
+  color: #fff;
+}
+
+.luxury .grid {
+  width: 100%;
+  height: 100%;
+}
+
+.luxury .grid .cards-container {
+  width: 100%;
+  height: 100%;
+}
+
+.luxury .grid .cards-container .cards-content {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-sizing: border-box;
+
+  padding: 2rem 0;
+}
+
+.luxury .grid .cards-container .cards-content .column {
+  width: 100%;
+  height: 100%;
+}
+
+.luxury .grid .cards-container .cards-content .column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.luxury .grid .cards-container .cards-content .column-grid {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.luxury .grid .cards-container .cards-content .column-grid .image-container {
+  width: 100%;
+  height: 100%;
+}
+
+.luxury
+  .grid
+  .cards-container
+  .cards-content
+  .column-grid
+  .image-container
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.luxury .grid .cards-container h3 {
+  width: 100%;
+  text-align: end;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.luxury .grid .cards-container .navigation {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.luxury .grid .cards-container .navigation .nav-btn {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+
+  padding: 1rem 0;
+
+  cursor: pointer;
+}
+
+.luxury .grid .cards-container .navigation .nav-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+
+  border-radius: 50%;
+}

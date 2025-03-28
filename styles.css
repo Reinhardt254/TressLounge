@@ -29,7 +29,7 @@ h6 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+ 
 .text-white{
   color: #fff;
   background: linear-gradient(90deg, #fff, #fff, #fff);
