@@ -21,8 +21,8 @@
       href="https://fonts.googleapis.com/css2?family=Aboreto&family=Marcellus+SC&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body>
+  </head> 
+  <body class="home">  
     <nav>
       <div class="column left">
         <div class="logo">
@@ -32,411 +32,234 @@
       <div class="column right">
         <div class="menu">
           <ul>
-            <li><a href="#">About</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Academy</a></li>
-            <li><a href="#">Franchise</a></li>
+            <li><a href="/franchise">Franchise</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Blogs</a></li>
           </ul>
         </div>
       </div>
+
+      <div class="button">
+        <button>BOOK NOW</button>
+      </div>
     </nav>
+    <main class="home-page">
+      <div class="sect-1">
+        <section class="hero">
+          <div class="hero-content">
+            <h2 class="hero-subtitle">FIND YOUR STYLE</h2>
+            <h1 class="hero-title">TRESS LOUNGE</h1>
+            <p class="hero-subtitle-2">THE FAMILY SALON</p>
+          </div>
 
-    <main>
-      <section class="hero">
-        <div class="hero-content">
-          <h1 class="hero-title">TRESS LOUNGE</h1>
-          <h2 class="hero-subtitle">FIND YOUR STYLE</h2>
-        </div>
-
-        <div class="hero-slider">
-          <div class="hero-slider-track">
-            <div class="hero-slide">
-              <div class="card1"><img src="/images/1.png" alt="" /></div>
-            </div>
-            <div class="hero-slide">
-              <div class="card1"><img src="/images/2.png" alt="" /></div>
-            </div>
-            <div class="hero-slide">
-              <div class="card1"><img src="/images/3.png" alt="" /></div>
-            </div>
-            <div class="hero-slide">
-              <div class="card1"><img src="/images/4.png" alt="" /></div>
-            </div>
-            <div class="hero-slide">
-              <div class="card1"><img src="/images/5.png" alt="" /></div>
-            </div>
-            <div class="hero-slide">
-              <div class="card1"><img src="/images/3.png" alt="" /></div>
+          <div class="hero-slider">
+            <div class="hero-slider-track">
+              <div class="hero-slide">
+                <div class="card1"><img src="/images/1.png" alt="" /></div>
+              </div>
+              <div class="hero-slide">
+                <div class="card1"><img src="/images/2.png" alt="" /></div>
+              </div>
+              <div class="hero-slide">
+                <div class="card1"><img src="/images/3.png" alt="" /></div>
+              </div>
+              <div class="hero-slide">
+                <div class="card1"><img src="/images/4.png" alt="" /></div>
+              </div>
+              <div class="hero-slide">
+                <div class="card1"><img src="/images/5.png" alt="" /></div>
+              </div>
+              <div class="hero-slide">
+                <div class="card1"><img src="/images/3.png" alt="" /></div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <style>
-          .hero-slider {
-            width: 100%;
-            height: 100%;
-            padding: 2rem 0 2rem 0;
-            overflow: hidden;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 3rem;
+          <style>
+            .hero-slider {
+              width: 100%;
+              height: 100%;
+              padding: 2rem 0 2rem 0;
+              overflow: hidden;
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 3rem;
 
-            display: flex;
-            align-items: end;
-            background-color: rgba(0, 0, 0, 0.781);
-          }
+              display: flex;
+              align-items: end;
+              background-color: rgba(0, 0, 0, 0);
 
-          .hero-slider-track {
-            display: flex;
-            gap: 30px;
-            animation: scroll 20s linear infinite;
-            width: fit-content;
-          }
-
-          .hero-slide {
-            flex: 0 0 auto;
-            width: auto;
-            height: 450px;
-            overflow: hidden;
-          }
-
-          .hero-slide .card1 {
-            width: 400px;
-            height: 100%;
-          }
-
-          .hero-slide .card1 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-            border-radius: 20px !important;
-            overflow: hidden;
-          }
-
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
+              z-index: 10;
             }
-            100% {
-              transform: translateX(-50%);
+
+            .hero-slider-track {
+              display: flex;
+              gap: 30px;
+              animation: scroll 20s linear infinite;
+              width: fit-content;
             }
-          }
-        </style>
 
-        <script>
-          // Clone slides for seamless loop
-          const track = document.querySelector(".hero-slider-track");
-          const slides = [...track.children];
+            .hero-slide {
+              flex: 0 0 auto;
+              width: auto;
+              height: 50vh;
+              overflow: hidden;
+            }
 
-          // Clone all slides and append them
-          slides.forEach((slide) => {
-            const clone = slide.cloneNode(true);
-            track.appendChild(clone);
-          });
+            .hero-slide .card1 {
+              width: 400px;
+              height: 100%;
+            }
 
-          // Add event listener to reset animation smoothly
-          track.addEventListener("animationend", () => {
-            track.style.animation = "none";
-            track.offsetHeight; // Trigger reflow
-            track.style.animation = null;
-          });
-        </script>
+            .hero-slide .card1 img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+
+              border-radius: 20px !important;
+              overflow: hidden;
+            }
+
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+          </style>
+
+          <script>
+            // Clone slides for seamless loop
+            const track = document.querySelector(".hero-slider-track");
+            const slides = [...track.children];
+
+            // Clone all slides and append them
+            slides.forEach((slide) => {
+              const clone = slide.cloneNode(true);
+              track.appendChild(clone);
+            });
+
+            // Add event listener to reset animation smoothly
+            track.addEventListener("animationend", () => {
+              track.style.animation = "none";
+              track.offsetHeight; // Trigger reflow
+              track.style.animation = null;
+            });
+          </script>
+        </section>
 
         <div class="overlay-home">
-          <div class="top"></div>
-          <div class="cards-container">
-
-          </div>
-          <div class="bottom"></div>
-        </div>
-      </section>
-
-      <section class="section servicess">
-        <div class="container">
-          <div class="column">
-            <h2>OUR SERVICES</h2>
-            <p>
-              TRESS LOUNGE OFFERS A WHOLE RANGE OF HAIR & BEAUTY SERVICES TO
-              MAKE YOU LOOK JUST THE WAY YOU WANT. OOZING WITH THE TOP RATE
-              SERVICES AND PRODUCTS, IT HAS BECOME A PREFERRED CHOICE OF THE
-              PEOPLE OF THIS REGION.
-            </p>
-            <button>VIEW ALL SERVICES</button>
-          </div>
-          <div class="column img">
-            <div class="slider-container">
-              <div class="slider">
-                <div class="slide"><img src="/images/1.png" alt="" /></div>
-                <div class="slide"><img src="/images/2.png" alt="" /></div>
-                <div class="slide"><img src="/images/3.png" alt="" /></div>
-                <div class="slide"><img src="/images/4.png" alt="" /></div>
-                <div class="slide"><img src="/images/5.png" alt="" /></div>
-              </div>
-
-              <div class="navigation-slide">
-                <button class="nav-btn prev-btn"><img src="/images/left.png" alt=""></button>
-                <div class="pagination"></div>
-                <button class="nav-btn next-btn"><img src="/images/right.png" alt=""></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script>
-        class Slider {
-          constructor(container) {
-            this.container = container;
-            this.slides = [...container.querySelectorAll(".slide")];
-            this.totalSlides = this.slides.length;
-            this.currentIndex = 0;
-
-            // Create navigation buttons
-            this.prevBtn = container.querySelector(".prev-btn");
-            this.nextBtn = container.querySelector(".next-btn");
-
-            // Create pagination
-            this.pagination = container.querySelector(".pagination");
-            this.createPagination();
-
-            // Clone slides for infinite effect
-            this.cloneSlides();
-
-            // Initialize
-            this.addEventListeners();
-            this.updateSlides();
-            this.startAutoplay();
-          }
-
-          cloneSlides() {
-            // Clone first and last slides for smooth infinite loop
-            const firstClone = this.slides[0].cloneNode(true);
-            const lastClone = this.slides[this.totalSlides - 1].cloneNode(true);
-            this.container.querySelector(".slider").appendChild(firstClone);
-            this.container
-              .querySelector(".slider")
-              .insertBefore(lastClone, this.slides[0]);
-            this.slides = [...this.container.querySelectorAll(".slide")];
-          }
-
-          createPagination() {
-            for (let i = 0; i < this.totalSlides; i++) {
-              const dot = document.createElement("div");
-              dot.classList.add("pagination-dot");
-              dot.addEventListener("click", () => this.goToSlide(i));
-              this.pagination.appendChild(dot);
-            }
-          }
-
-          updateSlides() {
-            this.slides.forEach((slide, index) => {
-              slide.classList.remove(
-                "active",
-                "prev-2",
-                "prev-1",
-                "next-1",
-                "next-2"
-              );
-
-              const position =
-                (index - this.currentIndex + this.totalSlides) %
-                this.totalSlides;
-
-              if (position === 0) slide.classList.add("active");
-              else if (position === this.totalSlides - 2)
-                slide.classList.add("prev-2");
-              else if (position === this.totalSlides - 1)
-                slide.classList.add("prev-1");
-              else if (position === 1) slide.classList.add("next-1");
-              else if (position === 2) slide.classList.add("next-2");
-            });
-
-            // Update pagination
-            const dots = [...this.pagination.children];
-            dots.forEach((dot, index) => {
-              dot.classList.toggle("active", index === this.currentIndex);
-            });
-          }
-
-          next() {
-            this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
-            this.updateSlides();
-          }
-
-          prev() {
-            this.currentIndex =
-              (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
-            this.updateSlides();
-          }
-
-          goToSlide(index) {
-            this.currentIndex = index;
-            this.updateSlides();
-          }
-
-          addEventListeners() {
-            this.nextBtn.addEventListener("click", () => this.next());
-            this.prevBtn.addEventListener("click", () => this.prev());
-
-            // Touch events
-            let touchStartX = 0;
-            this.container.addEventListener("touchstart", (e) => {
-              touchStartX = e.touches[0].clientX;
-            });
-
-            this.container.addEventListener("touchend", (e) => {
-              const touchEndX = e.changedTouches[0].clientX;
-              const diff = touchStartX - touchEndX;
-
-              if (Math.abs(diff) > 50) {
-                if (diff > 0) this.next();
-                else this.prev();
-              }
-            });
-          }
-
-          startAutoplay() {
-            let autoplayInterval = setInterval(() => this.next(), 3000);
-
-            this.container.addEventListener("mouseenter", () => {
-              clearInterval(autoplayInterval);
-            });
-
-            this.container.addEventListener("mouseleave", () => {
-              autoplayInterval = setInterval(() => this.next(), 3000);
-            });
-          }
-        }
-
-        // Initialize slider
-        document.addEventListener("DOMContentLoaded", () => {
-          new Slider(document.querySelector(".slider-container"));
-        });
-      </script>
-
-      <section class="section franchise">
-        <div class="container">
-          <div class="column">
-            <h2>BUY <br />FRANCHISE</h2>
-            <p>
-              Go Into Business With A Established Hairdressing Super brand And A
-              Visionary Business Owner.
-              <br />
-              Steps To Partner With The Most Premium SalonTess lounge Welcomes
-              Prospective Franchise Partners That Share Our Vision And Are
-              Motivated To Invest In A Concept That Strives For Mutual Success.
-            </p>
-            <button>KNOW MORE</button>
-            <p>LOCATIONS ON WHICH WE SERVE</p>
-            <div class="locations">SEE LOCATIONS</div>
-          </div>
-
-          <div class="column img">
-            <div class="franchise-slider-container">
-              <div class="franchise-slider">
-                <div class="franchise-slider-track fast">
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/1.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/2.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/3.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/4.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/5.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/3.png" alt="" /></div>
-                  </div>
+          <div class="top">
+            <nav>
+              <div class="column left">
+                <div class="logo">
+                  <img src="/images/logo.png" alt="logo" />
                 </div>
               </div>
-
-              <div class="franchise-slider">
-                <div class="franchise-slider-track slow">
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/5.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/4.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/3.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/2.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/1.png" alt="" /></div>
-                  </div>
-                  <div class="franchise-slide">
-                    <div class="card2"><img src="/images/3.png" alt="" /></div>
-                  </div>
+              <div class="column right">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blogs</a></li>
+                  </ul>
+                </div>
+              </div>
+        
+              <div class="button">
+                <button>BOOK NOW</button>
+              </div>
+            </nav>
+          </div>
+          <div class="cards-containers">
+            <div class="cards-slider">
+              <div class="cards-slider-track">
+                <div class="cards-slide">
+                  <div class="card1"><img src="/images/1.png" alt="" /></div>
+                </div>
+                <div class="cards-slide">
+                  <div class="card1"><img src="/images/2.png" alt="" /></div>
+                </div>
+                <div class="cards-slide">
+                  <div class="card1"><img src="/images/3.png" alt="" /></div>
+                </div>
+                <div class="cards-slide">
+                  <div class="card1"><img src="/images/4.png" alt="" /></div>
+                </div>
+                <div class="cards-slide">
+                  <div class="card1"><img src="/images/5.png" alt="" /></div>
+                </div>
+                <div class="cards-slide">
+                  <div class="card1"><img src="/images/3.png" alt="" /></div>
                 </div>
               </div>
             </div>
 
             <style>
-              .franchise-slider {
-                width: 100%;
-                padding: 10px 0;
-
-                position: relative;
+              .card-containers {
+                max-height: 80vh;
               }
 
-              .franchise-slider-track {
+              .overlay-home.active .cards-containers .cards-slide .card1 {
+                animation: overlayactive 2s ease;
+              }
+
+              .cards-slider {
+                width: 100%;
+                height: auto;
+
+                overflow: hidden;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 15vh;
+
+                z-index: 25;
+              }
+
+              .cards-slider-track {
                 display: flex;
-                gap: 10px;
+                gap: 30px;
+                animation: cardsScroll 20s linear infinite;
                 width: fit-content;
               }
 
-              .franchise-slider-track.fast {
-                animation: scrollFast 20s linear infinite;
-              }
-
-              .franchise-slider-track.slow {
-                animation: scrollSlow 20s linear infinite;
-              }
-
-              .franchise-slide {
+              .cards-slide {
                 flex: 0 0 auto;
                 width: auto;
-                height: 220px;
+                height: 80vh;
                 overflow: hidden;
-                border-radius: 10px;
               }
 
-              .franchise-slide .card2 {
-                width: 250px;
-                height: 100%;
-              }
-
-              .franchise-slide .card2 img {
-                width: 100%;
+              .cards-slide .card1 {
+                width: 1000px;
                 height: 100%;
                 object-fit: cover;
               }
 
-              @keyframes scrollFast {
-                0% {
-                  transform: translateX(0);
-                }
-                100% {
-                  transform: translateX(-50%);
-                }
+              .cards-slide .card1 img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                border-radius: 20px !important;
+                overflow: hidden;
               }
 
-              @keyframes scrollSlow {
+              @keyframes cardsScroll {
                 0% {
                   transform: translateX(0);
                 }
@@ -447,245 +270,641 @@
             </style>
 
             <script>
-              // Clone slides for seamless loop - fast track
-              const trackFast = document.querySelector(
-                ".franchise-slider-track.fast"
-              );
-              const slidesFast = [...trackFast.children];
+              // Clone slides for seamless loop
+              const cardsTrack = document.querySelector(".cards-slider-track");
+              const cardsSlides = [...cardsTrack.children];
 
-              slidesFast.forEach((slide) => {
+              // Clone all slides and append them
+              cardsSlides.forEach((slide) => {
                 const clone = slide.cloneNode(true);
-                trackFast.appendChild(clone);
+                cardsTrack.appendChild(clone);
               });
 
-              // Add event listener to reset animation smoothly - fast track
-              trackFast.addEventListener("animationend", () => {
-                trackFast.style.animation = "none";
-                trackFast.offsetHeight; // Trigger reflow
-                trackFast.style.animation = null;
-              });
-
-              // Clone slides for seamless loop - slow track
-              const trackSlow = document.querySelector(
-                ".franchise-slider-track.slow"
-              );
-              const slidesSlow = [...trackSlow.children];
-
-              slidesSlow.forEach((slide) => {
-                const clone = slide.cloneNode(true);
-                trackSlow.appendChild(clone);
-              });
-
-              // Add event listener to reset animation smoothly - slow track
-              trackSlow.addEventListener("animationend", () => {
-                trackSlow.style.animation = "none";
-                trackSlow.offsetHeight; // Trigger reflow
-                trackSlow.style.animation = null;
+              // Add event listener to reset animation smoothly
+              cardsTrack.addEventListener("animationend", () => {
+                cardsTrack.style.animation = "none";
+                cardsTrack.offsetHeight; // Trigger reflow
+                cardsTrack.style.animation = null;
               });
             </script>
           </div>
-        </div>
-      </section>
-
-      <section class="section shop">
-        <img class="right-img" src="/images/k.png" alt="" />
-
-        <div class="container">
-          <div class="row">
-            <h2>SHOP</h2>
-            <p>
-              Shop redesigned and reformulated hair care <br />
-              products of kerastase
-            </p>
-          </div>
-
-          <div class="row left">
-            <div class="column">
-              <div class="card">
-                <div class="image-container">
-                  <img src="/images/prod1.png" alt="" />
-                  <img class="elipse" src="/images/ellipse 2.png" alt="" />
-                </div>
-                <h3>KERASTASE</h3>
-                <p>BANE REGENERANT</p>
-                <button>BUY NOW</button>
-              </div>
-              <div class="card">
-                <div class="image-container">
-                  <img src="/images/prod2.png" alt="" />
-                  <img class="elipse" src="/images/ellipse 2.png" alt="" />
-                </div>
-                <h3>KERASTASE</h3>
-                <p>EUXIR ULTIMATE</p>
-                <button>BUY NOW</button>
-              </div>
-              <div class="card">
-                <div class="image-container">
-                  <img src="/images/prod3.png" alt="" />
-                  <img class="elipse" src="/images/ellipse 2.png" alt="" />
-                </div>
-                <h3>KERASTASE</h3>
-                <p>CURE MANIFESTO</p>
-                <button>BUY NOW</button>
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="content">
-                <img src="/images/kerastase.png" alt="" />
-                <p>
-                  Shop redesigned and reformulated hair care products of
-                  kerastase
-                </p>
-                <button>VIEW ALL PRODUCTS</button>
-              </div>
+          <div class="bottom">
+            <div class="bottom-content">
+              <img class="mouse" src="/images/mouse.png" alt="" />
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="section works">
-        <div class="container">
-          <div class="row text-section">
-            <h2>OUR WORKS</h2>
-            <p>
-              Experience luxury transformations with TressLounge, where top
-              celebrities trust us for their signature looks. Our expert
-              stylists bring glamour and elegance to every style, making you
-              shine like a star.
-            </p>
-          </div>
-
-          <div class="swiper-container works-swiper">
-            <div class="swiper-wrapper works-swiper-wrapper">
-              <div class="swiper-slide works-swiper-slide">
-                <div class="card works-swiper-slide-card">
-                  <img src="/images/1.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide works-swiper-slide">
-                <div class="card works-swiper-slide-card">
-                  <img src="/images/2.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide works-swiper-slide">
-                <div class="card works-swiper-slide-card">
-                  <img src="/images/3.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide works-swiper-slide">
-                <div class="card works-swiper-slide-card">
-                  <img src="/images/4.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide works-swiper-slide">
-                <div class="card works-swiper-slide-card">
-                  <img src="/images/1.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide works-swiper-slide">
-                <div class="card works-swiper-slide-card">
-                  <img src="/images/2.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide works-swiper-slide">
-                <div class="card works-swiper-slide-card">
-                  <img src="/images/3.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide works-swiper-slide">
-                <div class="card works-swiper-slide-card">
-                  <img src="/images/4.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Swiper JS -->
-          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-          <!-- Initialize Swiper -->
-          <script>
-            const swiper = new Swiper(".works-swiper", {
-              slidesPerView: "auto",
-              spaceBetween: 30,
-              loop: true,
-              speed: 3000,
-              autoplay: {
-                delay: 0,
-                disableOnInteraction: false,
-              },
-              freeMode: true,
-              freeModeMomentum: false,
-              allowTouchMove: true,
-            });
-          </script>
-        </div>
-      </section>
-
-      <div class="section">
-        <div class="separator"></div>
       </div>
 
-      <footer>
-        <div class="container">
-          <div class="column">
-            <div class="logo">
-              <img src="/images/footerlogo.png" alt="logo" />
-              <p>A FAMILY SALON</p>
+      <div class="sect-2">
+        <script>
+          const overlayHome = document.querySelector(".overlay-home");
+          const herocontent = document.querySelector(".hero-content");
+          const mouse = document.querySelector(".mouse");
+          const title = document.querySelector(".hero-title");
+          const subtextmain = document.querySelector(".hero-subtitle");
+          const subText = document.querySelector(".hero-subtitle-2");
+          const sectiontwo = document.querySelector(".sect-2");
+          const sectionone = document.querySelector(".sect-1");
+
+          const handleScroll = () => {
+            if (sectionone.classList.contains("active")) {
+              if (window.scrollY === 0) {
+                overlayHome.classList.remove("overtop-main");
+                overlayHome.classList.add("overtop");
+              } else {
+                overlayHome.classList.remove("overtop");
+                overlayHome.classList.add("overtop-main");
+              }
+            } else {
+              mouse.style.display = "block";
+            }
+          };
+
+          window.addEventListener("scroll", handleScroll);
+
+          mouse.addEventListener("click", () => {
+            if (overlayHome.classList.contains("active")) {
+              subText.classList.remove("active");
+              subtextmain.classList.remove("active");
+              herocontent.classList.remove("active");
+              title.classList.remove("active");
+              sectiontwo.classList.remove("active");
+              sectionone.classList.remove("active");
+              overlayHome.classList.remove("overtop");
+              overlayHome.classList.remove("overtop-main");
+              overlayHome.classList.remove("active");
+            } else {
+              overlayHome.classList.add("active");
+              subText.classList.add("active");
+              subtextmain.classList.add("active");
+              herocontent.classList.add("active");
+              title.classList.add("active");
+              sectiontwo.classList.add("active");
+              sectionone.classList.add("active");
+            }
+          });
+        </script>
+        <section class="section servicess">
+          <div class="container">
+            <div class="column">
+              <h2>OUR SERVICES</h2>
+              <p>
+                TRESS LOUNGE OFFERS A WHOLE RANGE OF HAIR & BEAUTY SERVICES TO
+                MAKE YOU LOOK JUST THE WAY YOU WANT. OOZING WITH THE TOP RATE
+                SERVICES AND PRODUCTS, IT HAS BECOME A PREFERRED CHOICE OF THE
+                PEOPLE OF THIS REGION.
+              </p>
+              <button>VIEW ALL SERVICES</button>
             </div>
+            <div class="column img">
+              <div class="slider-container">
+                <div class="slider">
+                  <div class="slide"><img src="/images/1.png" alt="" /></div>
+                  <div class="slide"><img src="/images/2.png" alt="" /></div>
+                  <div class="slide"><img src="/images/3.png" alt="" /></div>
+                  <div class="slide"><img src="/images/4.png" alt="" /></div>
+                  <div class="slide"><img src="/images/5.png" alt="" /></div>
+                </div>
 
-            <div class="copyright">
-              <p>Copyright © 2025 Tress Lounge. All rights reserved.</p>
-            </div>
-          </div>
-
-          <div class="column">
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Academy</a></li>
-              <li><a href="#">Franchise</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Blogs</a></li>
-            </ul>
-
-            <div class="socials">
-              <a href="#" class="icon">
-                <img src="/images/Facebook.png" alt="" />
-              </a>
-              <a href="#" class="icon">
-                <img src="/images/Instagram.png" alt="" />
-              </a>
-              <a href="#" class="icon">
-                <img src="/images/X.png" alt="" />
-              </a>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="column-content">
-              <h2>
-                Make you look just <br />
-                the way you want.
-              </h2>
-              <div class="contact-info">
-                <p>
-                  <span
-                    >Tress Lounge, SCO 30-31, Sector 8C, Madhya Marg,
-                    Chandigarh</span
-                  >
-                </p>
-                <p><span>Phone :</span> 0172-4656581</p>
-                <p><span>Email :</span> Contact@tresslounge.com</p>
-                <p><span>Web:</span> www.tresslounge.com</p>
+                <div class="navigation-slide">
+                  <button class="nav-btn prev-btn">
+                    <img src="/images/left.png" alt="" />
+                  </button>
+                  <div class="pagination"></div>
+                  <button class="nav-btn next-btn">
+                    <img src="/images/right.png" alt="" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+
+        <script>
+          class Slider {
+            constructor(container) {
+              this.container = container;
+              this.slides = [...container.querySelectorAll(".slide")];
+              this.totalSlides = this.slides.length;
+              this.currentIndex = 0;
+
+              // Create navigation buttons
+              this.prevBtn = container.querySelector(".prev-btn");
+              this.nextBtn = container.querySelector(".next-btn");
+
+              // Create pagination
+              this.pagination = container.querySelector(".pagination");
+              this.createPagination();
+
+              // Clone slides for infinite effect
+              this.cloneSlides();
+
+              // Initialize
+              this.addEventListeners();
+              this.updateSlides();
+              this.startAutoplay();
+            }
+
+            cloneSlides() {
+              // Clone first and last slides for smooth infinite loop
+              const firstClone = this.slides[0].cloneNode(true);
+              const lastClone =
+                this.slides[this.totalSlides - 1].cloneNode(true);
+              this.container.querySelector(".slider").appendChild(firstClone);
+              this.container
+                .querySelector(".slider")
+                .insertBefore(lastClone, this.slides[0]);
+              this.slides = [...this.container.querySelectorAll(".slide")];
+            }
+
+            createPagination() {
+              for (let i = 0; i < this.totalSlides; i++) {
+                const dot = document.createElement("div");
+                dot.classList.add("pagination-dot");
+                dot.addEventListener("click", () => this.goToSlide(i));
+                this.pagination.appendChild(dot);
+              }
+            }
+
+            updateSlides() {
+              this.slides.forEach((slide, index) => {
+                slide.classList.remove(
+                  "active",
+                  "prev-2",
+                  "prev-1",
+                  "next-1",
+                  "next-2"
+                );
+
+                const position =
+                  (index - this.currentIndex + this.totalSlides) %
+                  this.totalSlides;
+
+                if (position === 0) slide.classList.add("active");
+                else if (position === this.totalSlides - 2)
+                  slide.classList.add("prev-2");
+                else if (position === this.totalSlides - 1)
+                  slide.classList.add("prev-1");
+                else if (position === 1) slide.classList.add("next-1");
+                else if (position === 2) slide.classList.add("next-2");
+              });
+
+              // Update pagination
+              const dots = [...this.pagination.children];
+              dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === this.currentIndex);
+              });
+            }
+
+            next() {
+              this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
+              this.updateSlides();
+            }
+
+            prev() {
+              this.currentIndex =
+                (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
+              this.updateSlides();
+            }
+
+            goToSlide(index) {
+              this.currentIndex = index;
+              this.updateSlides();
+            }
+
+            addEventListeners() {
+              this.nextBtn.addEventListener("click", () => this.next());
+              this.prevBtn.addEventListener("click", () => this.prev());
+
+              // Touch events
+              let touchStartX = 0;
+              this.container.addEventListener("touchstart", (e) => {
+                touchStartX = e.touches[0].clientX;
+              });
+
+              this.container.addEventListener("touchend", (e) => {
+                const touchEndX = e.changedTouches[0].clientX;
+                const diff = touchStartX - touchEndX;
+
+                if (Math.abs(diff) > 50) {
+                  if (diff > 0) this.next();
+                  else this.prev();
+                }
+              });
+            }
+
+            startAutoplay() {
+              let autoplayInterval = setInterval(() => this.next(), 3000);
+
+              this.container.addEventListener("mouseenter", () => {
+                clearInterval(autoplayInterval);
+              });
+
+              this.container.addEventListener("mouseleave", () => {
+                autoplayInterval = setInterval(() => this.next(), 3000);
+              });
+            }
+          }
+
+          // Initialize slider
+          document.addEventListener("DOMContentLoaded", () => {
+            new Slider(document.querySelector(".slider-container"));
+          });
+        </script>
+
+        <section class="section franchise">
+          <div class="container">
+            <div class="column">
+              <h2>BUY <br />FRANCHISE</h2>
+              <p>
+                Go Into Business With A Established Hairdressing Super brand And
+                A Visionary Business Owner.
+                <br />
+                Steps To Partner With The Most Premium SalonTess lounge Welcomes
+                Prospective Franchise Partners That Share Our Vision And Are
+                Motivated To Invest In A Concept That Strives For Mutual
+                Success.
+              </p>
+              <button>KNOW MORE</button>
+              <p>LOCATIONS ON WHICH WE SERVE</p>
+              <div class="locations">SEE LOCATIONS</div>
+            </div>
+
+            <div class="column img">
+              <div class="franchise-slider-container">
+                <div class="franchise-slider">
+                  <div class="franchise-slider-track fast">
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/2.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/3.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/4.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/5.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/3.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="franchise-slider">
+                  <div class="franchise-slider-track slow">
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/5.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/4.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/3.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/2.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="franchise-slide">
+                      <div class="card2">
+                        <img src="/images/3.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <style>
+                .franchise-slider {
+                  width: 100%;
+                  padding: 10px 0;
+
+                  position: relative;
+                }
+
+                .franchise-slider-track {
+                  display: flex;
+                  gap: 10px;
+                  width: fit-content;
+                }
+
+                .franchise-slider-track.fast {
+                  animation: scrollFast 20s linear infinite;
+                }
+
+                .franchise-slider-track.slow {
+                  animation: scrollSlow 30s linear infinite;
+                }
+
+                .franchise-slide {
+                  flex: 0 0 auto;
+                  width: auto;
+                  height: 220px;
+                  overflow: hidden;
+                  border-radius: 10px;
+                }
+
+                .franchise-slide .card2 {
+                  width: 250px;
+                  height: 100%;
+                }
+
+                .franchise-slide .card2 img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+
+                @keyframes scrollFast {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-50%);
+                  }
+                }
+
+                @keyframes scrollSlow {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-50%);
+                  }
+                }
+              </style>
+
+              <script>
+                // Clone slides for seamless loop - fast track
+                const trackFast = document.querySelector(
+                  ".franchise-slider-track.fast"
+                );
+                const slidesFast = [...trackFast.children];
+
+                slidesFast.forEach((slide) => {
+                  const clone = slide.cloneNode(true);
+                  trackFast.appendChild(clone);
+                });
+
+                // Add event listener to reset animation smoothly - fast track
+                trackFast.addEventListener("animationend", () => {
+                  trackFast.style.animation = "none";
+                  trackFast.offsetHeight; // Trigger reflow
+                  trackFast.style.animation = null;
+                });
+
+                // Clone slides for seamless loop - slow track
+                const trackSlow = document.querySelector(
+                  ".franchise-slider-track.slow"
+                );
+                const slidesSlow = [...trackSlow.children];
+
+                slidesSlow.forEach((slide) => {
+                  const clone = slide.cloneNode(true);
+                  trackSlow.appendChild(clone);
+                });
+
+                // Add event listener to reset animation smoothly - slow track
+                trackSlow.addEventListener("animationend", () => {
+                  trackSlow.style.animation = "none";
+                  trackSlow.offsetHeight; // Trigger reflow
+                  trackSlow.style.animation = null;
+                });
+              </script>
+            </div>
+          </div>
+        </section>
+
+        <section class="section shop">
+          <img class="right-img" src="/images/k.png" alt="" />
+
+          <div class="container">
+            <div class="row">
+              <h2>SHOP</h2>
+              <p>
+                Shop redesigned and reformulated hair care <br />
+                products of kerastase
+              </p>
+            </div>
+
+            <div class="row left">
+              <div class="column">
+                <div class="card">
+                  <div class="image-container">
+                    <img src="/images/prod1.png" alt="" />
+                    <img class="elipse" src="/images/ellipse 2.png" alt="" />
+                  </div>
+                  <h3>KERASTASE</h3>
+                  <p>BANE REGENERANT</p>
+                  <button>BUY NOW</button>
+                </div>
+                <div class="card">
+                  <div class="image-container">
+                    <img src="/images/prod2.png" alt="" />
+                    <img class="elipse" src="/images/ellipse 2.png" alt="" />
+                  </div>
+                  <h3>KERASTASE</h3>
+                  <p>EUXIR ULTIMATE</p>
+                  <button>BUY NOW</button>
+                </div>
+                <div class="card">
+                  <div class="image-container">
+                    <img src="/images/prod3.png" alt="" />
+                    <img class="elipse" src="/images/ellipse 2.png" alt="" />
+                  </div>
+                  <h3>KERASTASE</h3>
+                  <p>CURE MANIFESTO</p>
+                  <button>BUY NOW</button>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="content">
+                  <img src="/images/kerastase.png" alt="" />
+                  <p>
+                    Shop redesigned and reformulated hair care products of
+                    kerastase
+                  </p>
+                  <button>VIEW ALL PRODUCTS</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section works">
+          <div class="container">
+            <div class="row text-section">
+              <h2>OUR WORKS</h2>
+              <p>
+                Experience luxury transformations with TressLounge, where top
+                celebrities trust us for their signature looks. Our expert
+                stylists bring glamour and elegance to every style, making you
+                shine like a star.
+              </p>
+            </div>
+
+            <div class="swiper-container works-swiper">
+              <div class="swiper-wrapper works-swiper-wrapper">
+                <div class="swiper-slide works-swiper-slide">
+                  <div class="card works-swiper-slide-card">
+                    <img src="/images/1.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide works-swiper-slide">
+                  <div class="card works-swiper-slide-card">
+                    <img src="/images/2.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide works-swiper-slide">
+                  <div class="card works-swiper-slide-card">
+                    <img src="/images/3.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide works-swiper-slide">
+                  <div class="card works-swiper-slide-card">
+                    <img src="/images/4.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide works-swiper-slide">
+                  <div class="card works-swiper-slide-card">
+                    <img src="/images/1.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide works-swiper-slide">
+                  <div class="card works-swiper-slide-card">
+                    <img src="/images/2.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide works-swiper-slide">
+                  <div class="card works-swiper-slide-card">
+                    <img src="/images/3.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide works-swiper-slide">
+                  <div class="card works-swiper-slide-card">
+                    <img src="/images/4.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Swiper JS -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+              const swiper = new Swiper(".works-swiper", {
+                slidesPerView: "auto",
+                spaceBetween: 30,
+                loop: true,
+                speed: 3000,
+                autoplay: {
+                  delay: 0,
+                  disableOnInteraction: false,
+                },
+                freeMode: true,
+                freeModeMomentum: false,
+                allowTouchMove: true,
+              });
+            </script>
+          </div>
+        </section>
+
+        <div class="section">
+          <div class="separator"></div>
         </div>
-      </footer>
+
+        <footer>
+          <div class="container">
+            <div class="column">
+              <div class="logo">
+                <img src="/images/footerlogo.png" alt="logo" />
+                <p>A FAMILY SALON</p>
+              </div>
+
+              <div class="copyright">
+                <p>Copyright © 2025 Tress Lounge. All rights reserved.</p>
+              </div>
+            </div>
+
+            <div class="column">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Academy</a></li>
+                <li><a href="#">Franchise</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blogs</a></li>
+              </ul>
+
+              <div class="socials">
+                <a href="#" class="icon">
+                  <img src="/images/Facebook.png" alt="" />
+                </a>
+                <a href="#" class="icon">
+                  <img src="/images/Instagram.png" alt="" />
+                </a>
+                <a href="#" class="icon">
+                  <img src="/images/X.png" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="column-content">
+                <h2>
+                  Make you look just <br />
+                  the way you want.
+                </h2>
+                <div class="contact-info">
+                  <p>
+                    <span
+                      >Tress Lounge, SCO 30-31, Sector 8C, Madhya Marg,
+                      Chandigarh</span
+                    >
+                  </p>
+                  <p><span>Phone :</span> 0172-4656581</p>
+                  <p><span>Email :</span> Contact@tresslounge.com</p>
+                  <p><span>Web:</span> www.tresslounge.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </main>
   </body>
 </html>
