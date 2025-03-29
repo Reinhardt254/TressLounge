@@ -69,6 +69,10 @@ nav {
   z-index: 5000;
 }
 
+.home nav{
+  height: 150px;
+}
+
 nav .column.left {
   display: flex;
   align-items: center;
