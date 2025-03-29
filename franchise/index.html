@@ -248,7 +248,7 @@
                       <span class="number">01</span>
                       <span class="text"
                         >How much does it cost to start a franchise?</span
-                    >
+                      >
                     </h3>
                     <div class="plus">-</div>
                   </div>
@@ -265,7 +265,7 @@
                       <span class="number">02</span>
                       <span class="text"
                         >How much does it cost to start a franchise?</span
-                    >
+                      >
                     </h3>
                     <div class="plus">+</div>
                   </div>
@@ -282,7 +282,7 @@
                       <span class="number">03</span>
                       <span class="text"
                         >How much does it cost to start a franchise?</span
-                    >
+                      >
                     </h3>
                     <div class="plus">+</div>
                   </div>
@@ -299,9 +299,9 @@
                       <span class="number">04</span>
                       <span class="text"
                         >How much does it cost to start a franchise?</span
-                    >
-                  </h3>
-                  <div class="plus">+</div>
+                      >
+                    </h3>
+                    <div class="plus">+</div>
                   </div>
                   <p>
                     The cost of starting a franchise can vary widely depending
@@ -331,13 +331,26 @@
             </div>
 
             <script>
-              const li = document.querySelectorAll(".journey .container .grid .column ul li");
+              const li = document.querySelectorAll(
+                ".journey .container .grid .column ul li"
+              );
 
               li.forEach((item) => {
                 item.addEventListener("click", () => {
+                  // Close all other items
+                  li.forEach((otherItem) => {
+                    if (otherItem !== item) {
+                      otherItem.classList.remove("active");
+                      const otherPlusIcon = otherItem.querySelector(".plus");
+                      otherPlusIcon.textContent = "+";
+                    }
+                  });
+                  // Toggle the clicked item
                   item.classList.toggle("active");
-                  const plusIcon = item.querySelector('.plus');
-                  plusIcon.textContent = item.classList.contains('active') ? '-' : '+';
+                  const plusIcon = item.querySelector(".plus");
+                  plusIcon.textContent = item.classList.contains("active")
+                    ? "-"
+                    : "+";
                 });
               });
             </script>
@@ -377,7 +390,7 @@
               <p>Established luxury salon brand with a strong customer base.</p>
             </div>
             <div class="card">
-              <img src="/images/transaction.png" alt="" />
+              <img src="/images/transactions.png" alt="" />
               <p>Established luxury salon brand with a strong customer base.</p>
             </div>
           </div>
