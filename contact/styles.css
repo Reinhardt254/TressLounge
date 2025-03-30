@@ -1,5 +1,7 @@
-body {
+.contact-layout {
  background-color: #fff;
+ padding: 0;
+ margin: 0;
 }
 
 main {
@@ -21,6 +23,71 @@ main nav {
 }
 
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 0 5rem;
+
+  background-color: #000;
+
+  position: relative;
+  z-index: 5000;
+}
+
+.home nav{
+  height: 150px;
+}
+
+nav .column.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+nav .column.left .logo {
+  width: auto;
+  height: 50px;
+}
+
+nav .column.left .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav .column.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+nav .column.right .menu {
+  display: flex;
+  align-items: center;
+}
+
+nav .column.right .menu ul {
+  display: flex;
+  align-items: center;
+}
+
+nav .column.right .menu ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+nav .column.right .menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .layout {
   width: 100%;

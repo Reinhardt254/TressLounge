@@ -1023,11 +1023,20 @@ footer .container .column ul {
 
 footer .container .column ul li {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+span{
+  padding: 0;
+  margin: 0;
 }
 
 footer .container .column ul li a {
   text-decoration: none;
   color: #000;
+  padding: 0;
+  margin: 0;
 }
 
 footer .container .column .logo {
