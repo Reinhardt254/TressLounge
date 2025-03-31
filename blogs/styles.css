@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 }
- 
+
 .blog-layout {
   background: url(https://www.tresslounge.ca/wp-content/uploads/2025/03/Rectangle.png);
   background-size: cover;
@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
   height: 700px;
   max-height: 100svh;
-
+ 
   position: relative;
 
   margin: 0;
@@ -39,8 +39,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
 
   box-sizing: border-box;
 }
@@ -84,37 +82,18 @@ nav .column.right .menu ul li {
   list-style: none;
   margin-right: 20px;
 }
-
+  
 nav .column.right .menu ul li a {
   text-decoration: none;
   color: #fff;
 }
-
+ 
 .blog-layout nav .button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: auto;
   height: auto;
-}
-
-.blog-layout nav .button button {
-  width: 100%;
-  height: 100%;
-  background-color: #000 !important;
-  border: 1px solid #fff !important;
-  color: #fff !important;
-  font-size: 1rem;
-  font-weight: 400;
-  cursor: pointer;
-  padding: 5px 20px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.blog-layout nav .button button:hover {
-  background-color: #fff !important;
-  color: #000 !important;
 }
 
 .blog-layout .content {
@@ -125,6 +104,9 @@ nav .column.right .menu ul li a {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+
+  position: relative;
+  z-index: 50;
 }
 
 .blog-layout .content h1 {
@@ -134,7 +116,7 @@ nav .column.right .menu ul li a {
   font-weight: 400;
 
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
 
   font-family: "Aboreto";
   font-style: normal;
@@ -155,15 +137,95 @@ nav .column.right .menu ul li a {
   background-clip: text;
 }
 
-li{
-   list-style: none;
+li {
+  list-style: none;
 }
 
 .blog-layout .right-img {
-  width: 30vw;
-  height: 100%;
+  width: 50vw;
+  height: auto;
   object-fit: cover;
   position: absolute;
   top: 0;
   right: 0;
+
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .blog-layout {
+    height: 60svh;
+  }
+
+  .blog-layout .content h1 {
+    font-size: 2rem;
+  }
+
+  .blog-layout nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 0 0.8rem;
+    margin: 0;
+  
+    background-color: #00000000;
+  
+    position: relative;
+    z-index: 5000;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    box-sizing: border-box;
+  }
+
+  .blog-layout nav .button {
+    display: none;
+  }
+
+  .blog-layout .content h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-align: start;
+    font-weight: 400;
+  
+    width: 90%;
+    max-width: 1400px;
+  
+    font-family: "Aboreto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: normal;
+    /* or 112% */
+    text-transform: uppercase;
+    text-align: center;
+  
+    background: linear-gradient(
+      90.47deg,
+      #e8c95d 2.14%,
+      #faf7ed 41.19%,
+      #ecce60 80.24%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .blog-layout .right-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+  
+    height: 100%;
+  }
 }

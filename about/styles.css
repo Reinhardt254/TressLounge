@@ -2,9 +2,42 @@ body {
   background-color: #000 !important;
 }
 
+@keyframes leftAnimate {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightAnimate {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+p.animate {
+  animation: leftAnimate 2s ease;
+}
+
+h1.animate {
+  animation: rightAnimate 2s ease;
+}
+
 .about {
   width: 100%;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
 }
 
 .about .layout {
@@ -44,7 +77,7 @@ body {
   justify-content: center;
 }
 
-.about .layout .container .content h2 {
+.about .layout .container .content h1 {
   font-size: 4rem;
   font-weight: 600;
   color: #fff;
@@ -120,7 +153,7 @@ body {
 .about .section.perfection .container {
   width: 90%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
 
   display: flex;
   flex-direction: column;
@@ -154,9 +187,15 @@ body {
   justify-content: center;
 
   position: relative;
+
+  overflow: hidden;
 }
 
-.about .section.perfection .carousel-container .carousel-item .carousel-item-content {
+.about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .carousel-item-content {
   width: 100%;
   height: 100%;
 
@@ -164,6 +203,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
 }
 
 .about .section.perfection .carousel-container .carousel-item h3 {
@@ -186,19 +227,42 @@ body {
 }
 
 .about .section.perfection .carousel-container .carousel-item .image-overlay {
-   width: 100%;
-   height: 100%;
- 
-   display: flex;
-   align-items: center;
-   position: relative;
+  transition: 3s ease;
+  left: -150%;
 
-   position: absolute;
-   top: 0;
-   left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  position: absolute;
 }
 
-.about .section.perfection .carousel-container .carousel-item .image-overlay .image-overlay-content {
+.about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .image-overlay.active {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .image-overlay
+  .image-overlay-content {
   width: 100%;
   height: 100%;
 
@@ -206,7 +270,13 @@ body {
   align-items: center;
 }
 
-.about .section.perfection .carousel-container .carousel-item .image-overlay .image-overlay-content .image-overlay-content-main {
+.about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .image-overlay
+  .image-overlay-content
+  .image-overlay-content-main {
   width: 100%;
   height: 100%;
 
@@ -217,14 +287,29 @@ body {
   position: relative;
 }
 
-.about .section.perfection .carousel-container .carousel-item .image-overlay .image-overlay-content .main-image {
+.about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .image-overlay
+  .image-overlay-content
+  .main-image {
   width: auto;
   height: 300px;
 
   object-fit: contain;
+
+  position: relative;
+  z-index: 50;
 }
 
-.about .section.perfection .carousel-container .carousel-item .image-overlay .image-overlay-content .image-left {
+.about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .image-overlay
+  .image-overlay-content
+  .image-left {
   width: auto;
   height: 200px;
 
@@ -236,7 +321,13 @@ body {
   left: 150px;
 }
 
-.about .section.perfection .carousel-container .carousel-item .image-overlay .image-overlay-content .image-right {
+.about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .image-overlay
+  .image-overlay-content
+  .image-right {
   width: auto;
   height: 200px;
 
@@ -248,10 +339,36 @@ body {
   right: 150px;
 }
 
+.image-right.animate {
+  animation: moveRight 2s ease;
+}
+
+.image-left.animate {
+  animation: moveLeft 2s ease;
+}
+
+@keyframes moveLeft {
+  0% {
+    left: 40%;
+  }
+  100% {
+    left: 150px;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    right: 40%;
+  }
+  100% {
+    right: 150px;
+  }
+}
+
 .about .section.perfection .carousel-container .navigation {
   width: 100%;
   height: 100%;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,7 +400,7 @@ body {
 
 .about .section.canada .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   height: 100%;
 
   display: flex;
@@ -376,7 +493,7 @@ body {
 
 .about .section.why-choose-us .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   height: 100%;
 
   display: flex;
@@ -432,4 +549,94 @@ body {
   color: #fff;
 
   text-align: center;
+}
+
+/* ------------------------------------- */
+
+.about .cta {
+  width: 100%;
+  height: 500px;
+
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.about .cta .underlay {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  position: absolute;
+  top: 90%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 5;
+}
+
+.about .cta .container {
+  width: 90%;
+  max-width: 1000px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 10;
+
+  background-color: #ffffff00;
+}
+
+.about .cta .container h2 {
+  font-size: 44px;
+  font-weight: 600;
+  color: #000;
+
+  text-align: center;
+}
+
+.about .cta .container .separator {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+
+  margin: 2rem 0;
+}
+
+.about .cta .container p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000;
+
+  text-align: center;
+
+  padding-bottom: 2rem;
+}
+
+.about .cta .container button {
+  padding: 0.5rem 1.8rem;
+
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+
+  font-size: 17px;
+
+  transition: 0.5s ease;
+}
+
+.about .cta .container button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
 }

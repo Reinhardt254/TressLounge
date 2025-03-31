@@ -22,7 +22,7 @@ body {
 
 .main-franchise .layout .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   height: 550px;
 
   display: flex;
@@ -79,6 +79,50 @@ body {
   align-items: flex-end;
   justify-content: flex-end;
 }
+
+@media (max-width: 768px) {
+  .main-franchise .layout .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .main-franchise .layout .container .column {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-franchise .layout .container .column.img {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
+  }
+
+  .main-franchise .layout .container .column h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  .main-franchise .layout .container .column p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  .main-franchise .layout .container .column button {
+    font-size: 1rem;
+    width: auto;
+  }
+}
+
 /* -------------------------------------------------- */
 .journey {
   width: 100%;
@@ -93,7 +137,7 @@ body {
 
 .journey .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   height: 100%;
 }
 
@@ -126,17 +170,17 @@ body {
 }
 
 .journey .container .grid .column .text-content {
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: start;
- 
-   height: 40px;
- }
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  height: 40px;
+}
 
 .journey .container .grid .column h3 {
-   width: 100%;
-   height: 100%;
+  width: 100%;
+  height: 100%;
   font-size: 1.1rem;
   color: #fff;
   text-transform: uppercase;
@@ -147,25 +191,25 @@ body {
   justify-content: start;
 }
 
-.journey .container .grid .column ul{
-   width: 100%;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: start;
-   justify-content: start;
-   gap: 1rem;
+.journey .container .grid .column ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
 }
- 
-.journey .container .grid .column li{
-   width: 100%;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: start;
-   justify-content: start;
 
-   border: 2px solid #152329;
+.journey .container .grid .column li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+
+  border: 2px solid #152329;
 }
 
 /* 
@@ -230,38 +274,82 @@ body {
 }
 
 .journey .container .grid .column .active .plus {
-  background-color: #F0CD50;
+  background-color: #f0cd50;
   color: #fff;
 }
 
-.journey .container .grid .column.right{
-   width: 100%;
-   height: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: start;
+.journey .container .grid .column.right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
-.journey .container .grid .column.right .form{
-   width: 100%;
-   max-width: 400px;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: start;
-   justify-content: start;
-   gap: 1rem;
+.journey .container .grid .column.right .form {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
 }
 
-.journey .container .grid .column.right .form input{
-   width: 100%;
-   height: 40px;
-   border: 2px solid #152329;
-   border-radius: 10px;
-   
-   padding: 0 1rem;
+.journey .container .grid .column.right .form input {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #152329;
+  border-radius: 10px;
+
+  padding: 0 1rem;
 }
 
+@media (max-width: 768px) {
+  .journey .container .grid .column.right .form {
+    max-width: 100%;
+  }
+
+  .journey {
+    padding: 4rem 0;
+  }
+
+  .journey .container {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .journey .container .grid {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .journey .container h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding-bottom: 1rem;
+  }
+
+  .journey .container .grid .column .active p {
+    height: 200px;
+  }
+
+  .journey .container .grid .column.right .form {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 
 /* -------------------------------------------------------- */
 .invest {
@@ -277,7 +365,7 @@ body {
 
 .invest .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   height: 100%;
 
   display: flex;
@@ -341,6 +429,43 @@ body {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  .invest{
+    padding: 2rem 0 4rem 0;
+  }
+
+  .invest .grid {
+    width: 100%;
+    height: 100%;
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .invest .grid .card {
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .invest .grid .card img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .invest .grid .card p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+}
+
 /* ------------------------------------------------------------ */
 .luxury {
   width: 100%;
@@ -350,11 +475,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding-bottom: 4rem;
 }
 
 .luxury .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   height: 100%;
 }
 
@@ -401,6 +528,56 @@ body {
   box-sizing: border-box;
 
   padding: 2rem 0;
+}
+
+.luxury-slider {
+  width: fit-content;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#luxurySlider .navigation {
+  position: relative;
+  width: auto;
+
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  position: relative !important;
+
+  height: 40px !important;
+  width: 40px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  left: 0 !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-button-next img,
+.swiper-button-prev img {
+  width: 40px;
+  height: 40px;
 }
 
 .luxury .grid .cards-container .cards-content .column {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
@@ -44,10 +44,10 @@
       <section class="layout">
         <div class="container">
           <div class="content">
-            <h2>
+            <h1>
               Where Luxury <br />
               Meets Expertise
-            </h2>
+            </h1>
             <p>
               Tress Lounge is a globally recognized luxury salon chain dedicated
               to redefining beauty and self-care experiences. With a strong
@@ -79,8 +79,7 @@
                   the perfect luxury <br />
                   and family salon
                 </h3>
-
-                <div class="image-overlay">
+                <div class="image-overlay active">
                   <div class="image-overlay-content">
                     <div class="image-overlay-content-main">
                       <img
@@ -92,7 +91,7 @@
                         class="image-left"
                         src="https://www.tresslounge.ca/wp-content/uploads/2025/03/maskgroupleft.png"
                         alt=""
-                      />
+                      /> 
                       <img
                         class="image-right"
                         src="https://www.tresslounge.ca/wp-content/uploads/2025/03/maskgroupright.png"
@@ -101,14 +100,54 @@
                     </div>
                   </div>
                 </div>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const imageOverlay = document.querySelector('.image-overlay');
+                    const imageOverlayContentLeft = document.querySelector('.image-left');
+                    const imageOverlayContentRight = document.querySelector('.image-right');
+
+                    const observer = new IntersectionObserver((entries) => {
+                      entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                          // Add animation class when in viewport
+                          imageOverlayContentLeft.classList.add('animate');
+                          imageOverlayContentRight.classList.add('animate');
+                        }
+                      });
+                    });
+
+                    observer.observe(imageOverlay);
+                  });
+                </script>
               </div>
             </div>
           </div>
 
           <div class="navigation">
-            <img src="https://www.tresslounge.ca/wp-content/uploads/2025/03/arrowleftmask.png" alt="" />
-            <img src="https://www.tresslounge.ca/wp-content/uploads/2025/03/arrowrightmask.png" alt="" />
+            <img class="bt-left" src="https://www.tresslounge.ca/wp-content/uploads/2025/03/arrowleftmask.png" alt="" />
+            <img class="bt-right" src="https://www.tresslounge.ca/wp-content/uploads/2025/03/arrowrightmask.png" alt="" />
           </div>
+          <script>
+            const imageOverlay = document.querySelector('.image-overlay');
+            const btRight = document.querySelector('.navigation .bt-right');
+            const btLeft = document.querySelector('.navigation .bt-left');
+
+            btRight.addEventListener('click', () => {
+              if (imageOverlay.classList.contains('active')) {
+                imageOverlay.classList.remove('active');
+              } else {
+                imageOverlay.classList.add('active');
+              }
+            });
+            
+            btLeft.addEventListener('click', () => {
+              if (imageOverlay.classList.contains('active')) {
+                imageOverlay.classList.remove('active');
+              } else {
+                imageOverlay.classList.add('active');
+              }
+            });
+          </script>
         </div>
       </section>
 
@@ -153,7 +192,7 @@
           </div>
         </div>
       </section>
-
+  
       <section class="section why-choose-us">
         <div class="container">
           <h2 class="text-white">WHY CHOOSE US</h2>
@@ -193,6 +232,21 @@
           </div>
         </div>
       </section>
+
+      <section class="cta">
+        <div class="container">
+          <h2>Experience the Tress Lounge <br /> Difference</h2>
+          <div class="separator"></div>
+          <p>Whether you're looking for a complete transformation, a relaxing self-care session, or expert advice on your beauty needs, Tress Lounge Canada is your ultimate destination. Step into a world of elegance and let us redefine your beauty experience.</p>
+          <button>BOOK NOW</button>
+        </div>
+
+        <img class="underlay" src="https://www.tresslounge.ca/wp-content/uploads/2025/03/232323-1.png" alt="">
+      </section>
+
+      <div class="section">
+        <div class="separator"></div>
+      </div>
 
       <footer>
         <div class="container">
@@ -253,6 +307,33 @@
           </div>
         </div>
       </footer>
+
+      <script>
+        const paragraph = document.querySelector('p');  
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Add animation class when in viewport
+              entry.target.classList.add('animate');
+            }
+          });
+        });
+
+        observer.observe(paragraph);
+
+        const h1 = document.querySelector('h1');
+        const h1Observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+            }
+          });
+        });
+
+          h1Observer.observe(h1);
+
+      </script>
     </main>
   </body>
 </html>
