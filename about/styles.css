@@ -217,36 +217,7 @@ h1.animate {
   text-align: center;
 }
 
-.about .section.perfection .carousel-container .carousel-item {
-  width: 100%;
-  height: 400px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-
-  overflow: hidden;
-}
-
-.about
-  .section.perfection
-  .carousel-container
-  .carousel-item
-  .carousel-item-content {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
-.about .section.perfection .carousel-container .carousel-item h3 {
+.about .section.perfection h3 {
   font-size: 5rem;
   font-weight: 600;
   text-align: center;
@@ -265,18 +236,40 @@ h1.animate {
   background-clip: text;
 }
 
-.about .section.perfection .carousel-container .carousel-item .image-overlay {
-  transition: 3s ease;
-  left: -150%;
-
+.about .section.perfection .carousel {
   width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+
+  position: relative;
+
+  margin-top: 4rem;
+}
+
+.about .section.perfection .carousel-track {
+  display: flex;
+  width: 200%; /* Accommodate both original and clone */
+  transform: translateX(0);
+
   height: 100%;
 
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+
+.about .section.perfection .carousel-item {
+  width: 50%; /* Each item takes half the track width */
+  flex-shrink: 0;
+}
+
+.about .section.perfection .carousel-container .carousel-item .image-overlay {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   position: relative;
-
-  position: absolute;
 }
 
 .about
@@ -286,14 +279,9 @@ h1.animate {
   .image-overlay.active {
   width: 100%;
   height: 100%;
-
   display: flex;
   align-items: center;
   position: relative;
-
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .about
@@ -358,6 +346,8 @@ h1.animate {
   top: 50%;
   transform: translateY(-50%);
   left: 150px;
+
+  animation: moveLeft 2s ease;
 }
 
 .about
@@ -376,6 +366,8 @@ h1.animate {
   top: 50%;
   transform: translateY(-50%);
   right: 150px;
+
+  animation: moveRight 2s ease;
 }
 
 .image-right.animate {
