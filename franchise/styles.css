@@ -3,7 +3,7 @@ body {
   height: 100%;
   width: 100%;
 }
-
+ 
 .main-franchise {
   width: 100%;
   height: 100%;
@@ -62,6 +62,18 @@ body {
 
 .main-franchise .layout .container .column button {
   font-size: 1rem;
+  border: 2px solid #fff;
+  color: #000;
+
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main-franchise .layout .container .column button:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 .franchise-slider-container {
@@ -93,11 +105,27 @@ body {
 
   .main-franchise .layout .container .column.img {
     width: 100%;
-    height: 600px;
+    height: 400px;
     overflow: hidden;
     padding: 0;
     margin: 0;
     margin-top: 3rem;
+  }
+
+  .franchise-slider-container {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+  
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    rotate: -60deg;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
   .main-franchise .layout .container .column h1 {
@@ -306,6 +334,19 @@ body {
   padding: 0 1rem;
 }
 
+.journey .container .grid .column.right .form button{
+  border: 2px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.journey .container .grid .column.right .form button:hover {
+  border-radius: 10px;
+  background-color: #15232900;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .journey .container .grid .column.right .form {
     max-width: 100%;
@@ -351,19 +392,20 @@ body {
   }
 }
 
-/* -------------------------------------------------------- */
-.invest {
+/* ----------------------------------------------------------- */
+.section.investment {
   width: 100%;
   height: 100%;
+  background-color: #000;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
-.invest .container {
+.section.investment .container {
   width: 90%;
   max-width: 1400px;
   height: 100%;
@@ -372,99 +414,203 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+
+  gap: 3rem;
 }
 
-.invest .heading {
+.section.investment .row {
   width: 100%;
-  height: auto;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.invest .heading h2 {
+.section.investment .row h2 {
   width: 100%;
   text-align: center;
   font-size: 2rem;
   color: #fff;
   text-transform: uppercase;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+
+  /* Inside auto layout */
 }
 
-.invest .heading h2 span:nth-child(1) {
-  color: #fff;
-  line-height: 2;
+.section.investment .row h2 span {
+  color: #fff !important;
 }
 
-.invest .heading h2 span:nth-child(2) {
-  color: #fff;
-}
 
-.invest .grid {
+.section.investment .row.grid .column {
   width: 100%;
   height: 100%;
 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.invest .grid .card {
+.section.investment .row .column img {
+  width: 25%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .section.investment {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 2rem 0;
+  }
+
+  .section.investment .row .column img {
+    width: 50%;
+  }
+
+  .section.investment .row .column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section.investment .row .column img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
+/* ------------------------------------------------------------ */
+.section.territory {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4rem 0 8rem 0;
+
+  box-sizing: border-box;
+}
+
+.section.territory .container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3rem;
+}
+
+.section.territory .row {
   width: 100%;
   height: 100%;
 
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
 }
 
-.invest .grid .card img {
-  width: 100px;
+.section.territory .row h2 {
+  width: 100%;
+  text-align: center;
+  font-size:4rem;
+  color: #fff;
+  text-transform: uppercase;
+
+  font-weight: 400;
+  text-align: center;
+
+  color: #9e8d46;
+}
+
+.section.territory .row p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+
+font-family: 'Aboreto';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 120%;
+/* identical to box height, or 58px */
+text-align: center;
+
+color: #FFFEFC;
+
+
+}
+
+.section.territory .row .column {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.territory .row .column img {
+  width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.invest .grid .card p {
-  font-size: 1.2rem;
-  color: #fff;
-  text-transform: uppercase;
-}
+
 
 @media (max-width: 768px) {
-  .invest{
-    padding: 2rem 0 4rem 0;
-  }
-
-  .invest .grid {
+  .section.territory {
     width: 100%;
     height: 100%;
-  
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .invest .grid .card {
-    width: 100%;
-    height: 100%;
+    background-color: #000;
   
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+  
+    padding: 2rem 0 8rem 0;
+  
+    box-sizing: border-box;
   }
-
-  .invest .grid .card img {
-    width: 100%;
-    height: 80px;
-    object-fit: contain;
-  }
-
-  .invest .grid .card p {
-    text-align: center;
-    font-size: 0.9rem;
 }
-}
+
+
+
+
+
 
 /* ------------------------------------------------------------ */
 .luxury {
