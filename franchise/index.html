@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body> 
     <nav>
       <div class="column left">
         <div class="logo">
@@ -28,21 +28,58 @@
         <div class="menu">
           <ul>
             <li><a href="/about">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Academy</a></li>
-            <li><a href="#">Franchise</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/academy">Academy</a></li>
+            <li><a href="/franchise">Franchise</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/blogs">Blogs</a></li>
           </ul>
         </div>
       </div>
-
+ 
       <div class="button">
-        <button>BOOK NOW</button>
+        <button onclick="window.location.href='/booking'">BOOK NOW</button>
+      </div>
+
+      <div class="mobile-menu-button">
+        <img src="https://www.tresslounge.ca/wp-content/uploads/2025/03/menu-bar.png" alt="">
       </div>
     </nav>
+ 
+    <div class="mobile-menu">
+      <div class="menu">
+        <img class="x" src="https://www.tresslounge.ca/wp-content/uploads/2025/03/cancel.png" alt="">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/academy">Academy</a></li>
+          <li><a href="/franchise">Franchise</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/blogs">Blogs</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const mobileMenuButton = document.querySelector(".mobile-menu-button");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+
+      const x = document.querySelector(".x");
+
+      x.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+    </script>
+
     <main class="main-franchise">
       <section class="layout">
         <div class="container">
@@ -68,7 +105,7 @@
                     <div class="franchise-slide">
                       <div class="card2">
                         <img
-                          src="https://www.tresslounge.ca/wp-content/uploads/2025/03/1.png"
+                          src="https://www.tresslounge.ca/wp-content/uploads/2025/03/04-1.png"
                           alt=""
                         />
                       </div>
@@ -76,7 +113,7 @@
                     <div class="franchise-slide">
                       <div class="card2">
                         <img
-                          src="https://www.tresslounge.ca/wp-content/uploads/2025/03/2.png"
+                          src="https://www.tresslounge.ca/wp-content/uploads/2025/03/02-2.png"
                           alt=""
                         />
                       </div>
@@ -84,7 +121,7 @@
                     <div class="franchise-slide">
                       <div class="card2">
                         <img
-                          src="https://www.tresslounge.ca/wp-content/uploads/2025/03/3.png"
+                          src="https://www.tresslounge.ca/wp-content/uploads/2025/03/01-1.png"
                           alt=""
                         />
                       </div>
@@ -629,78 +666,6 @@
           </div>
         </div>
       </section>
-
-      <footer>
-        <div class="container">
-          <div class="column">
-            <div class="logo">
-              <img
-                src="https://www.tresslounge.ca/wp-content/uploads/2025/03/footerlogo.png"
-                alt="logo"
-              />
-              <p>A FAMILY SALON</p>
-            </div>
-
-            <div class="copyright">
-              <p>Copyright © 2025 Tress Lounge. All rights reserved.</p>
-            </div>
-          </div>
-
-          <div class="column">
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Academy</a></li>
-              <li><a href="#">Franchise</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Blogs</a></li>
-            </ul>
-
-            <div class="socials">
-              <a href="#" class="icon">
-                <img
-                  src="https://www.tresslounge.ca/wp-content/uploads/2025/03/Facebook.png"
-                  alt=""
-                />
-              </a>
-              <a href="#" class="icon">
-                <img
-                  src="https://www.tresslounge.ca/wp-content/uploads/2025/03/Instagram.png"
-                  alt=""
-                />
-              </a>
-              <a href="#" class="icon">
-                <img
-                  src="https://www.tresslounge.ca/wp-content/uploads/2025/03/X.png"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="column-content">
-              <h2>
-                Make you look just <br />
-                the way you want.
-              </h2>
-              <div class="contact-info">
-                <p>
-                  <span
-                    >Tress Lounge, SCO 30-31, Sector 8C, Madhya Marg,
-                    Chandigarh</span
-                  >
-                </p>
-                <p><span>Phone :</span> 0172-4656581</p>
-                <p><span>Email :</span> Contact@tresslounge.com</p>
-                <p><span>Web:</span> www.tresslounge.com</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   </body>
 </html>

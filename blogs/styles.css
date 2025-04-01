@@ -3,6 +3,13 @@ body {
   padding: 0;
 }
 
+nav .column.right .menu ul li {
+  list-style: none;
+  margin: 0 !important;
+  margin-right: 20px !important;
+  width: auto !important;
+}
+
 .blog-layout {
   background: url(https://www.tresslounge.ca/wp-content/uploads/2025/03/Rectangle.png);
   background-size: cover;
