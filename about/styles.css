@@ -2,9 +2,9 @@ body {
   background-color: #fff !important;
 }
 
-.separator-m{
+.separator-m {
   background-color: #000 !important;
-  width: 90VW;
+  width: 90vw;
   height: 1px;
 
   position: relative;
@@ -19,7 +19,7 @@ body {
     transform: translateX(0);
   }
 }
- 
+
 @keyframes rightAnimate {
   0% {
     transform: translateX(100vw);
@@ -115,16 +115,14 @@ h1.animate {
 
   padding-bottom: 1rem;
 
+  font-family: "Aboreto";
+  font-style: normal;
+  font-weight: 400;
 
-font-family: 'Aboreto';
-font-style: normal;
-font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
 
-
-text-align: center;
-text-transform: uppercase;
-
-color: #FFFFFF;
+  color: #ffffff;
 }
 
 .about .layout .container .content p {
@@ -136,14 +134,13 @@ color: #FFFFFF;
 
   text-align: center;
 
-font-family: 'Aboreto';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 52px;
-/* or 260% */
-text-align: center;
-
+  font-family: "Aboreto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 52px;
+  /* or 260% */
+  text-align: center;
 }
 
 .about .layout .container .wrapper {
@@ -188,6 +185,20 @@ text-align: center;
 }
 
 @media (max-width: 768px) {
+  .about .layout {
+    width: 100%;
+    height: 600px;
+    max-height: 70svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background-color: #000;
+  }
+
   .about .layout .container .content {
     width: 100%;
     height: 90%;
@@ -198,8 +209,24 @@ text-align: center;
   }
 
   .about .layout .container .content h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem !important;
     width: 100%;
+    text-align: center;
+  }
+
+  .about .layout .container .content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+
+    text-align: center;
+
+    font-family: "Aboreto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: normal;
+    /* or 260% */
     text-align: center;
   }
 
@@ -209,20 +236,18 @@ text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-  
+
     gap: 2rem;
   }
-  
+
   .about .layout .container .social-content a {
     font-size: 1rem;
     font-weight: 400;
     color: #fff;
-  
+
     text-decoration: none;
     transition: 0.5s ease;
   }
-  
-  
 }
 
 /* -------------------------------- */
@@ -465,6 +490,117 @@ text-align: center;
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .about .section.perfection .carousel-container .navigation img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about .section.perfection h3 {
+    font-size: 2rem !important;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  
+    background: linear-gradient(
+      124.27deg,
+      #c49246 13.73%,
+      #d1a96a 48.79%,
+      #e6bc7a 86.17%,
+      #e1bb80 109.14%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .about .section.perfection .carousel {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+  
+    position: relative;
+  
+    margin-top: 4rem;
+  }
+  
+  .about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .image-overlay
+  .image-overlay-content
+  .main-image {
+  width: auto;
+  height: 200px;
+
+  object-fit: contain;
+
+  position: relative;
+  z-index: 50;
+}
+
+.about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .image-overlay
+  .image-overlay-content
+  .image-left {
+  width: auto;
+  height: 100px;
+
+  object-fit: contain;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 250px;
+
+  animation: moveLeft 2s ease;
+}
+
+.about
+  .section.perfection
+  .carousel-container
+  .carousel-item
+  .image-overlay
+  .image-overlay-content
+  .image-right {
+  width: auto;
+  height: 100px;
+
+  object-fit: contain;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 250px;
+
+  animation: moveRight 2s ease;
+}
+
+@keyframes moveLeft {
+  0% {
+    left: 40%;
+  }
+  100% {
+    left: 250px;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    right: 40%;
+  }
+  100% {
+    right: 250px;
+  }
+}
+}
+
 /* ---------------------------- */
 
 .about .section.canada {
@@ -574,7 +710,7 @@ text-align: center;
     width: 100%;
     text-align: center;
   }
-  
+
   .about .section.canada .container .column p {
     font-size: 1.5rem;
     font-weight: 400;
@@ -583,24 +719,24 @@ text-align: center;
     width: 100%;
     text-align: center;
   }
-  
+
   .about .section.canada .container .column ul li {
     width: 100%;
     height: 100%;
-  
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
-  
+
   .about .section.canada .container .column ul li img {
     width: 50px;
     height: 50px;
-  
+
     object-fit: contain;
   }
-  
+
   .about .section.canada .container .column ul li p {
     font-size: 1.1rem;
     font-weight: 400;
@@ -611,12 +747,12 @@ text-align: center;
   .about .section.canada .container .column {
     width: 90%;
     height: 100%;
-  
+
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
-  
+
     gap: 2rem;
   }
 }
@@ -705,22 +841,22 @@ text-align: center;
   .about .section.why-choose-us .container .grid .card img {
     width: 100%;
     height: 100px;
-  
+
     object-fit: contain;
   }
-  
+
   .about .section.why-choose-us .container .grid .card h3 {
     font-size: 1.2rem;
     font-weight: 600;
     color: #fff;
     text-align: center;
   }
-  
+
   .about .section.why-choose-us .container .grid .card p {
     font-size: 1rem;
     font-weight: 400;
     color: #fff;
-  
+
     text-align: center;
   }
 }
@@ -738,6 +874,8 @@ text-align: center;
   justify-content: center;
 
   position: relative;
+
+  z-index: 2;
 }
 
 .about .cta .underlay {
@@ -749,8 +887,6 @@ text-align: center;
   position: absolute;
   top: 50%;
   left: 0%;
-
-
 
   z-index: 5;
 }
@@ -777,6 +913,10 @@ text-align: center;
   color: #000;
 
   text-align: center;
+
+  font-family: "Aboreto";
+  font-style: normal;
+  font-weight: 400;
 }
 
 .about .cta .container .separator {
@@ -819,5 +959,31 @@ text-align: center;
   .about .cta {
     padding: 3rem 0;
     height: auto;
+  }
+
+  .about .cta .container h2 {
+    font-size: 44px;
+    font-weight: 600;
+    color: #000;
+
+    text-align: center;
+  }
+
+  .about .cta .container .separator {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+
+    margin: 2rem 0;
+  }
+
+  .about .cta .container p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #000;
+
+    text-align: center;
+
+    padding-bottom: 2rem;
   }
 }

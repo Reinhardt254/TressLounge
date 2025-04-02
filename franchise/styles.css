@@ -2,17 +2,21 @@ body {
   background-color: #000 !important;
   height: 100%;
   width: 100%;
+
+  box-sizing: border-box;
 }
 
 .main-franchise {
   width: 100%;
   height: 100%;
-}
 
+  box-sizing: border-box;
+}
+ 
 .main-franchise .layout {
   width: 100%;
   height: 100%;
-
+ 
   overflow: hidden;
 
   display: flex;
@@ -46,6 +50,8 @@ body {
   justify-content: center;
 
   gap: 2rem;
+
+  box-sizing: border-box;
 }
 
 .main-franchise .layout .container .column.two {
@@ -82,7 +88,7 @@ body {
   font-family: "Aboreto";
   font-style: normal;
   font-weight: 400;
-  font-size: 3.8rem;
+  font-size: 3.4rem;
 
   background: linear-gradient(90deg, #d1bb61 0%, #9e8d49 50%, #d1bb61 100%);
   -webkit-background-clip: text;
@@ -138,9 +144,37 @@ body {
 }
 
 @media (max-width: 768px) {
+  .main-franchise .layout {
+  width: 100%;
+  height: auto;
+ 
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  background-color: #000 !important;
+}
+
+.main-franchise .layout .container .column h1 {
+  font-size: 2rem !important;
+}
+
+.main-franchise .layout .container .column.two {
+  width: 100%;
+  height: auto;
+  max-height: auto;
+  position: relative;
+  z-index: 150;
+}
+
   .main-franchise .layout .container {
     flex-direction: column;
     height: auto;
+    max-height: 200000000px;
   }
 
   .main-franchise .layout .container .column {
@@ -210,6 +244,8 @@ body {
   position: relative;
 
   background-color: #000 !important;
+
+  overflow: hidden;
 }
 
 .journey .underlay-imgs {
@@ -221,7 +257,7 @@ body {
   object-fit: fill;
 
   z-index: 50;
-
+  overflow: hidden;
 }
 
 .journey .container {
@@ -441,6 +477,16 @@ body {
     flex-direction: column;
   }
 
+  .journey .container .column.left {
+    width: 100%;
+    height: 100%;
+  }
+
+.journey .container .column.right {
+    width: 100%;
+    height: 100%;
+  }
+
   .journey .container h2 {
     font-size: 1.5rem;
     color: #fff;
@@ -477,11 +523,13 @@ body {
   justify-content: center;
 
   padding: 4rem 0;
+
+  box-sizing: border-box;
 }
 
 .section.investment .container {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1200px;
   height: 100%;
 
   display: flex;
@@ -490,6 +538,8 @@ body {
   justify-content: center;
 
   gap: 3rem;
+
+  box-sizing: border-box;
 }
 
 .section.investment .row {
@@ -504,13 +554,13 @@ body {
 .section.investment .row h2 {
   width: 100%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #fff;
   text-transform: uppercase;
 
   font-style: normal;
   font-weight: 400;
-  font-size: 52px;
+
   line-height: 140%;
   text-align: center;
   letter-spacing: 0.11em;
@@ -558,8 +608,21 @@ body {
     padding: 2rem 0;
   }
 
+  .section.investment .container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3rem;
+}
+
   .section.investment .row .column img {
-    width: 50%;
+    width: 100%;
   }
 
   .section.investment .row .column {
@@ -613,13 +676,13 @@ body {
   align-items: center;
   justify-content: center;
 
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .section.territory .row h2 {
   width: 100%;
   text-align: center;
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #fff;
   text-transform: uppercase;
 
@@ -643,7 +706,7 @@ body {
   font-family: "Aboreto";
   font-style: normal;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 2.5rem;
   line-height: 120%;
   /* identical to box height, or 58px */
   text-align: center;
@@ -658,12 +721,57 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
+}
+
+.section.territory .row .column .btn-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.territory .row .column .btn-wrapper .btn-wrapper-content {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.section.territory .row .column .btn-wrapper .apply-btn {
+  width: auto;
+  height: auto;
+  
+
+  position: absolute;
+  top: 6rem;
+  left: 2.5rem;
+
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px  !important;
+  padding: 0.7rem 1.5rem !important;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .section.territory .row .column img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  max-width: 900px;
 }
 
 @media (max-width: 768px) {
@@ -716,11 +824,21 @@ body {
 font-family: 'Aboreto';
 font-style: normal;
 font-weight: 400;
-font-size: 4rem;
+font-size: 2.5rem;
 
 text-align: center;
 
 color: #9E8D46;
+}
+
+.luxury .heading p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+
+  padding: 1.5rem 0 ;
 }
 
 .luxury .heading .text-white {
