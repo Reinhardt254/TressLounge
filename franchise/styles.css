@@ -1,9 +1,9 @@
 body {
-  background-color: #000;
+  background-color: #000 !important;
   height: 100%;
   width: 100%;
 }
- 
+
 .main-franchise {
   width: 100%;
   height: 100%;
@@ -18,18 +18,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
+
+  background-color: #000 !important;
+}
+
+.underlay-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+
+  z-index: 100;
 }
 
 .main-franchise .layout .container {
   width: 90%;
   max-width: 1400px;
-  height: 550px;
+  height: 700px;
+  max-height: 80svh;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   gap: 2rem;
+}
+
+.main-franchise .layout .container .column.two {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 150;
 }
 
 .main-franchise .layout .container .column {
@@ -41,18 +64,31 @@ body {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .main-franchise .layout .container .column.img {
   width: 100%;
   height: 100%;
+
+  position: relative;
+  z-index: 50 !important;
 }
 
 .main-franchise .layout .container .column h1 {
-  font-size: 4rem;
   color: #fff;
   text-transform: uppercase;
+
+  font-family: "Aboreto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.8rem;
+
+  background: linear-gradient(90deg, #d1bb61 0%, #9e8d49 50%, #d1bb61 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .main-franchise .layout .container .column p {
@@ -60,10 +96,19 @@ body {
   color: #fff;
 }
 
+.main-franchise .layout .container .column p span {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 .main-franchise .layout .container .column button {
   font-size: 1rem;
   border: 2px solid #fff;
   color: #000;
+  background-color: #fff !important;
+  font-weight: 400;
+  font-size: 1rem;
 
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -71,8 +116,8 @@ body {
 }
 
 .main-franchise .layout .container .column button:hover {
-  background-color: transparent;
-  color: #fff;
+  background-color: transparent !important;
+  color: #fff !important;
   border: 2px solid #fff;
 }
 
@@ -116,12 +161,12 @@ body {
     width: 500px;
     height: auto;
     object-fit: cover;
-  
+
     position: absolute;
     top: 200px;
     right: 50px;
     rotate: -60deg;
-  
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -161,16 +206,45 @@ body {
   justify-content: center;
 
   padding: 10rem 0 5rem 0;
+
+  position: relative;
+
+  background-color: #000 !important;
+}
+
+.journey .underlay-imgs {
+  position: absolute;
+  top: 5rem;
+  right: -1rem;
+  width: 50vw;
+  height: 100%;
+  object-fit: fill;
+
+  z-index: 50;
+
 }
 
 .journey .container {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1000px;
   height: 100%;
+
+  position: relative;
+  z-index: 50;
 }
 
 .journey .container .column {
   width: 100%;
+  height: 100%;
+}
+
+.journey .container .column.left {
+  width: 60%;
+  height: 100%;
+}
+
+.journey .container .column.right {
+  width: 40%;
   height: 100%;
 }
 
@@ -181,6 +255,11 @@ body {
   text-align: center;
 
   padding-bottom: 2rem;
+
+  font-family: "Aboreto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
 }
 
 .journey .container .grid {
@@ -190,11 +269,6 @@ body {
   align-items: start;
   justify-content: start;
   gap: 3rem;
-}
-
-.journey .container .grid .column {
-  width: 100%;
-  height: 100%;
 }
 
 .journey .container .grid .column .text-content {
@@ -306,17 +380,9 @@ body {
   color: #fff;
 }
 
-.journey .container .grid .column.right {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
 .journey .container .grid .column.right .form {
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -334,9 +400,17 @@ body {
   padding: 0 1rem;
 }
 
-.journey .container .grid .column.right .form button{
+.journey .container .grid .column.right .form button {
   border: 2px solid #fff;
   transition: all 0.3s ease-in-out;
+  font-size: 14px !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 100%;
+
+  background-color: #000000;
+  color: #fff;
 }
 
 .journey .container .grid .column.right .form button:hover {
@@ -396,7 +470,7 @@ body {
 .section.investment {
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #000 !important;
 
   display: flex;
   align-items: center;
@@ -442,8 +516,11 @@ body {
   letter-spacing: 0.11em;
   text-transform: uppercase;
 
-  color: #FFFFFF;
+  color: #ffffff;
 
+  font-family: "Aboreto";
+  font-style: normal;
+  font-weight: 400;
 
   /* Inside auto layout */
 }
@@ -451,7 +528,6 @@ body {
 .section.investment .row h2 span {
   color: #fff !important;
 }
-
 
 .section.investment .row.grid .column {
   width: 100%;
@@ -474,11 +550,11 @@ body {
     width: 100%;
     height: 100%;
     background-color: #000;
-  
+
     display: flex;
     align-items: center;
     justify-content: center;
-  
+
     padding: 2rem 0;
   }
 
@@ -486,7 +562,7 @@ body {
     width: 50%;
   }
 
-  .section.investment .row .column{
+  .section.investment .row .column {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -499,7 +575,6 @@ body {
     object-fit: contain;
   }
 }
-
 
 /* ------------------------------------------------------------ */
 .section.territory {
@@ -544,7 +619,7 @@ body {
 .section.territory .row h2 {
   width: 100%;
   text-align: center;
-  font-size:4rem;
+  font-size: 4rem;
   color: #fff;
   text-transform: uppercase;
 
@@ -552,6 +627,10 @@ body {
   text-align: center;
 
   color: #9e8d46;
+
+  font-family: "Aboreto";
+  font-style: normal;
+  font-weight: 400;
 }
 
 .section.territory .row p {
@@ -561,17 +640,15 @@ body {
   color: #fff;
   text-transform: uppercase;
 
-font-family: 'Aboreto';
-font-style: normal;
-font-weight: 400;
-font-size: 48px;
-line-height: 120%;
-/* identical to box height, or 58px */
-text-align: center;
+  font-family: "Aboreto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  /* identical to box height, or 58px */
+  text-align: center;
 
-color: #FFFEFC;
-
-
+  color: #fffefc;
 }
 
 .section.territory .row .column {
@@ -589,28 +666,21 @@ color: #FFFEFC;
   object-fit: contain;
 }
 
-
-
 @media (max-width: 768px) {
   .section.territory {
     width: 100%;
     height: 100%;
     background-color: #000;
-  
+
     display: flex;
     align-items: center;
     justify-content: center;
-  
+
     padding: 2rem 0 8rem 0;
-  
+
     box-sizing: border-box;
   }
 }
-
-
-
-
-
 
 /* ------------------------------------------------------------ */
 .luxury {
@@ -627,7 +697,7 @@ color: #FFFEFC;
 
 .luxury .container {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1200px;
   height: 100%;
 }
 
@@ -642,15 +712,21 @@ color: #FFFEFC;
   font-size: 2rem;
   color: #fff;
   text-transform: uppercase;
+
+font-family: 'Aboreto';
+font-style: normal;
+font-weight: 400;
+font-size: 4rem;
+
+text-align: center;
+
+color: #9E8D46;
 }
 
-.luxury .heading h2 span:nth-child(1) {
+.luxury .heading .text-white {
   color: #fff;
-  line-height: 2;
-}
 
-.luxury .heading h2 span:nth-child(2) {
-  color: #fff;
+  font-size: 2.5rem;
 }
 
 .luxury .grid {
@@ -729,6 +805,10 @@ color: #FFFEFC;
 .luxury .grid .cards-container .cards-content .column {
   width: 100%;
   height: 100%;
+
+  max-height: 500px;
+
+  overflow: hidden;
 }
 
 .luxury .grid .cards-container .cards-content .column img {
@@ -748,6 +828,8 @@ color: #FFFEFC;
   align-items: center;
   align-content: center;
   gap: 1rem;
+
+  overflow: hidden;
 }
 
 .luxury .grid .cards-container .cards-content .column-grid .image-container {

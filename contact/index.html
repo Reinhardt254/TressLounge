@@ -18,7 +18,7 @@
     <section class="layout">
       <nav>
         <div class="column left">
-          <div class="logo">
+          <div onclick="window.location.href='/'" class="logo">
             <img
               src="https://www.tresslounge.ca/wp-content/uploads/2025/03/logo.png"
               alt="logo"
@@ -125,25 +125,45 @@
       </div>
     </section>
  
+    <style>
+      .formsss .form.column {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff00;
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 2rem;
+      }
+      .formsss .form-container {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff00;
+      }
+    </style>
     <section class="formsss">
       <div class="container">
         <div class="form column">
           <h2>Get in Touch</h2>
-
+          <div class="form-container">
+            [forminator_form id="1139"]
+          </div>
         </div>
         <div class="location column">
-          <h2>CONTACT US THROUGH LOCATION</h2>
+          <h2 class="text-black">CONTACT US THROUGH LOCATION</h2>
           <div class="card">
             <div class="card-content">
               <div class="card-content-left">
-                <h3>Address: </h3>
+                <h3 class="text-black">Address: </h3>
                 <p>
                   Address : 8502 Preston Rd. Inglewood, <br />
                   Maine 98380
                 </p>
               </div>
               <div class="card-content-right">
-                <h3>Contact: </h3>
+                <h3 class="text-black">Contact: </h3>
                 <p>Contact : info@la-studioweb.com</p>
                 <p>(308) 555-0121</p>
   
