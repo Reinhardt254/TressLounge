@@ -117,7 +117,7 @@
 
             <div class="carousel-track">
               <!-- First Slide -->
-              <div class="carousel-item">
+              <div class="carousel-item mzee">
                 <div class="carousel-item-content">
                   <h3>
                   <div class="image-overlay">
@@ -144,7 +144,7 @@
                 </div>
               </div>
               <!-- Second Slide -->
-              <div class="carousel-item">
+              <div class="carousel-item mzee">
                 <div class="carousel-item-content">
                   <h3>
                   <div class="image-overlay">
@@ -171,7 +171,7 @@
                 </div>
               </div>
               <!-- Third Slide -->
-              <div class="carousel-item">
+              <div class="carousel-item mzee">
                 <div class="carousel-item-content">
                   <div class="image-overlay">
                     <div class="image-overlay-content">
@@ -197,31 +197,7 @@
                 </div>
               </div>
               <!-- Clone of First Slide for infinite loop -->
-              <div class="carousel-item">
-                <div class="carousel-item-content">
-                  <div class="image-overlay">
-                    <div class="image-overlay-content">
-                      <div class="image-overlay-content-main">
-                        <img
-                          class="main-image"
-                          src="https://www.tresslounge.ca/wp-content/uploads/2025/03/maskgroupmain.png"
-                          alt=""
-                        />
-                        <img
-                          class="image-left"
-                          src="https://www.tresslounge.ca/wp-content/uploads/2025/03/maskgroupleft.png"
-                          alt=""
-                        />
-                        <img
-                          class="image-right"
-                          src="https://www.tresslounge.ca/wp-content/uploads/2025/03/maskgroupright.png"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+   
             </div>
           </div>
 
@@ -241,21 +217,34 @@
           <script>
             // Viewport animation
             document.addEventListener("DOMContentLoaded", function () {
-              const imageOverlays = document.querySelectorAll(".image-overlay");
+              const imageOverlays = document.querySelectorAll(".mzee");
+              let animationTriggered = {};
 
               const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    const leftImage = entry.target.querySelector(".image-left");
-                    const rightImage =
-                      entry.target.querySelector(".image-right");
-                    if (leftImage) leftImage.classList.add("animate");
-                    if (rightImage) rightImage.classList.add("animate");
+                  const leftImage = entry.target.querySelector(".image-left");
+                  const rightImage = entry.target.querySelector(".image-right");
+                  
+                  // Reset animation state when element is out of view
+                  if (!entry.isIntersecting) {
+                    if (leftImage) leftImage.classList.remove("animate");
+                    if (rightImage) rightImage.classList.remove("animate");
+                    // Reset the animation trigger flag when out of view
+                    animationTriggered[entry.target.id] = false;
+                    return;
                   }
+
+                  // Add animation class when in view
+                  if (leftImage) leftImage.classList.add("animate");
+                  if (rightImage) rightImage.classList.add("animate");
                 });
+              }, {
+                threshold: 0.5 // Trigger when 50% of element is visible
               });
 
-              imageOverlays.forEach((overlay) => {
+              // Add unique IDs to each carousel item for tracking
+              imageOverlays.forEach((overlay, index) => {
+                overlay.id = `carousel-item-${index}`;
                 observer.observe(overlay);
               });
 
@@ -502,8 +491,6 @@
               <li><a href="/about">About</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/products">Products</a></li>
-              <li><a href="/gallery">Gallery</a></li>
-              <li><a href="/academy">Academy</a></li>
               <li><a href="/franchise">Franchise</a></li>
               <li><a href="/contact">Contact Us</a></li>
               <li><a href="/blogs">Blogs</a></li>

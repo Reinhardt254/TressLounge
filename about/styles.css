@@ -19,7 +19,7 @@ body {
     transform: translateX(0);
   }
 }
-
+ 
 @keyframes rightAnimate {
   0% {
     transform: translateX(100vw);
@@ -420,8 +420,6 @@ h1.animate {
   top: 50%;
   transform: translateY(-50%);
   left: 150px;
-
-  animation: moveLeft 2s ease;
 }
 
 .about
@@ -440,8 +438,6 @@ h1.animate {
   top: 50%;
   transform: translateY(-50%);
   right: 150px;
-
-  animation: moveRight 2s ease;
 }
 
 .image-right.animate {
