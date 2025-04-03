@@ -4,6 +4,10 @@
 
    font-family: 'Marcellus SC', serif;
  }
+
+ input:focus{
+   outline: none !important;
+ }
   
 .products-layout nav {
    display: flex;

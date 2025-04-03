@@ -64,6 +64,8 @@ background: rgba(123, 123, 123, 0.2);
   box-shadow: inset 0px 4px 50px #FFFFFF;
   backdrop-filter: blur(50.4px);
   border-radius: 22px;
+
+  padding: 2rem;
 }
 
 .loyalty-card .container .content {
