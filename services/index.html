@@ -12,7 +12,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Aboreto&family=Marcellus+SC&display=swap"
       rel="stylesheet"
-    /> 
+    />
   </head>
   <div class="contact-layout">
     <section class="layout">
@@ -120,7 +120,7 @@
         </h1>
       </div>
     </section>
- 
+
     <div class="second-wrapper">
       <section class="loyalty-card">
         <div class="container">
@@ -282,6 +282,86 @@
                       </div>
                     </div>
 
+                    
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Basic Pedicure3</h4>
+                          <p>$25</p>
+                        </div>
+                        <p>
+                          A relaxing treatment that includes soaking,
+                          exfoliation, and nail care.
+                        </p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Deluxe Pedicure</h4>
+                          <p>$40</p>
+                        </div>
+                        <p>
+                          A luxurious treatment with added massage and
+                          moisturizing mask.
+                        </p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Gel Pedicure</h4>
+                          <p>$50</p>
+                        </div>
+                        <p>A long-lasting pedicure with gel polish.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>French Pedicure</h4>
+                          <p>$35</p>
+                        </div>
+                        <p>
+                          A classic pedicure with a stylish French tip finish.
+                        </p>
+                      </div>
+                    </div>
+
+                    
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Basic Pedicure4</h4>
+                          <p>$25</p>
+                        </div>
+                        <p>
+                          A relaxing treatment that includes soaking,
+                          exfoliation, and nail care.
+                        </p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Deluxe Pedicure</h4>
+                          <p>$40</p>
+                        </div>
+                        <p>
+                          A luxurious treatment with added massage and
+                          moisturizing mask.
+                        </p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Gel Pedicure</h4>
+                          <p>$50</p>
+                        </div>
+                        <p>A long-lasting pedicure with gel polish.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>French Pedicure</h4>
+                          <p>$35</p>
+                        </div>
+                        <p>
+                          A classic pedicure with a stylish French tip finish.
+                        </p>
+                      </div>
+                    </div>
+
                     <div class="column right">
                       <div class="navigation">
                         <img
@@ -300,30 +380,24 @@
                 </div>
 
                 <script>
-                  const leftIcon = document.querySelector(
-                    ".category.active .left-icon1"
-                  );
-                  const rightIcon = document.querySelector(
-                    ".category.active .right-icon1"
-                  );
-                  const contentWrappers =
-                    document.querySelectorAll(".content-wrapper");
+                  const leftIconPedicure = document.querySelector(".category.pedicure .left-icon1");
+                  const rightIconPedicure = document.querySelector(".category.pedicure .right-icon1");
+                  const contentWrappersPedicure = document.querySelectorAll(".pedicure .content-wrapper");
 
                   // Set the first content wrapper as active by default
-                  contentWrappers[0].classList.add("active");
+                  let currentIndexPedicure = 0;
+                  contentWrappersPedicure[currentIndexPedicure].classList.add("active");
 
-                  leftIcon.addEventListener("click", () => {
-                    contentWrappers.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers[0].classList.add("active");
+                  leftIconPedicure.addEventListener("click", () => {
+                    contentWrappersPedicure[currentIndexPedicure].classList.remove("active");
+                    currentIndexPedicure = (currentIndexPedicure - 1 + contentWrappersPedicure.length) % contentWrappersPedicure.length;
+                    contentWrappersPedicure[currentIndexPedicure].classList.add("active");
                   });
 
-                  rightIcon.addEventListener("click", () => {
-                    contentWrappers.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers[1].classList.add("active");
+                  rightIconPedicure.addEventListener("click", () => {
+                    contentWrappersPedicure[currentIndexPedicure].classList.remove("active");
+                    currentIndexPedicure = (currentIndexPedicure + 1) % contentWrappersPedicure.length;
+                    contentWrappersPedicure[currentIndexPedicure].classList.add("active");
                   });
                 </script>
 
@@ -364,7 +438,69 @@
                     <div class="content-wrapper">
                       <div class="card left">
                         <div class="subhead">
-                          <h4>Haircut</h4>
+                          <h4>Haircut4</h4>
+                          <p>$30</p>
+                        </div>
+                        <p>A stylish haircut tailored to your preferences.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Hair Coloring</h4>
+                          <p>$50</p>
+                        </div>
+                        <p>Professional hair coloring for a fresh new look.</p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Hair Styling</h4>
+                          <p>$25</p>
+                        </div>
+                        <p>Expert styling for any occasion.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Hair Treatment</h4>
+                          <p>$40</p>
+                        </div>
+                        <p>Deep conditioning treatment for healthy hair.</p>
+                      </div>
+                    </div>
+
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Haircut3</h4>
+                          <p>$30</p>
+                        </div>
+                        <p>A stylish haircut tailored to your preferences.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Hair Coloring</h4>
+                          <p>$50</p>
+                        </div>
+                        <p>Professional hair coloring for a fresh new look.</p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Hair Styling</h4>
+                          <p>$25</p>
+                        </div>
+                        <p>Expert styling for any occasion.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Hair Treatment</h4>
+                          <p>$40</p>
+                        </div>
+                        <p>Deep conditioning treatment for healthy hair.</p>
+                      </div>
+                    </div>
+
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Haircut2</h4>
                           <p>$30</p>
                         </div>
                         <p>A stylish haircut tailored to your preferences.</p>
@@ -408,30 +544,27 @@
                     </div>
                   </div>
                 </div>
-
                 <script>
-                  const leftIcon2 = document.querySelector(".hair .left-icon2");
-                  const rightIcon2 =
-                    document.querySelector(".hair .right-icon2");
-                  const contentWrappers2 = document.querySelectorAll(
+                  const prevIcon = document.querySelector(".hair .left-icon2");
+                  const nextIcon = document.querySelector(".hair .right-icon2");
+                  const hairContentWrappers = document.querySelectorAll(
                     ".hair .content-wrapper"
                   );
 
                   // Set the first content wrapper as active by default
-                  contentWrappers2[0].classList.add("active");
+                  let activeIndex = 0;
+                  hairContentWrappers[activeIndex].classList.add("active");
 
-                  leftIcon2.addEventListener("click", () => {
-                    contentWrappers2.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers2[0].classList.add("active");
+                  prevIcon.addEventListener("click", () => {
+                    hairContentWrappers[activeIndex].classList.remove("active");
+                    activeIndex = (activeIndex - 1 + hairContentWrappers.length) % hairContentWrappers.length;
+                    hairContentWrappers[activeIndex].classList.add("active");
                   });
 
-                  rightIcon2.addEventListener("click", () => {
-                    contentWrappers2.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers2[1].classList.add("active");
+                  nextIcon.addEventListener("click", () => {
+                    hairContentWrappers[activeIndex].classList.remove("active");
+                    activeIndex = (activeIndex + 1) % hairContentWrappers.length;
+                    hairContentWrappers[activeIndex].classList.add("active");
                   });
                 </script>
 
@@ -472,7 +605,71 @@
                     <div class="content-wrapper">
                       <div class="card left">
                         <div class="subhead">
-                          <h4>Day Makeup</h4>
+                          <h4>Day Makeup2</h4>
+                          <p>$40</p>
+                        </div>
+                        <p>Natural makeup for a fresh daytime look.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Evening Makeup</h4>
+                          <p>$60</p>
+                        </div>
+                        <p>Glamorous makeup for special occasions.</p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Bridal Makeup</h4>
+                          <p>$80</p>
+                        </div>
+                        <p>Specialized makeup for brides on their big day.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Makeup Lessons</h4>
+                          <p>$50</p>
+                        </div>
+                        <p>Learn makeup techniques from our professionals.</p>
+                      </div>
+                    </div>
+
+                    
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Day Makeup3</h4>
+                          <p>$40</p>
+                        </div>
+                        <p>Natural makeup for a fresh daytime look.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Evening Makeup</h4>
+                          <p>$60</p>
+                        </div>
+                        <p>Glamorous makeup for special occasions.</p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Bridal Makeup</h4>
+                          <p>$80</p>
+                        </div>
+                        <p>Specialized makeup for brides on their big day.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Makeup Lessons</h4>
+                          <p>$50</p>
+                        </div>
+                        <p>Learn makeup techniques from our professionals.</p>
+                      </div>
+                    </div>
+
+                    
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Day Makeup4</h4>
                           <p>$40</p>
                         </div>
                         <p>Natural makeup for a fresh daytime look.</p>
@@ -516,7 +713,6 @@
                     </div>
                   </div>
                 </div>
-
                 <script>
                   const leftIcon3 = document.querySelector(
                     ".makeup .left-icon3"
@@ -529,20 +725,19 @@
                   );
 
                   // Set the first content wrapper as active by default
-                  contentWrappers3[0].classList.add("active");
+                  let currentIndex3 = 0;
+                  contentWrappers3[currentIndex3].classList.add("active");
 
                   leftIcon3.addEventListener("click", () => {
-                    contentWrappers3.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers3[0].classList.add("active");
+                    contentWrappers3[currentIndex3].classList.remove("active");
+                    currentIndex3 = (currentIndex3 - 1 + contentWrappers3.length) % contentWrappers3.length;
+                    contentWrappers3[currentIndex3].classList.add("active");
                   });
 
                   rightIcon3.addEventListener("click", () => {
-                    contentWrappers3.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers3[1].classList.add("active");
+                    contentWrappers3[currentIndex3].classList.remove("active");
+                    currentIndex3 = (currentIndex3 + 1) % contentWrappers3.length;
+                    contentWrappers3[currentIndex3].classList.add("active");
                   });
                 </script>
 
@@ -589,7 +784,81 @@
                     <div class="content-wrapper">
                       <div class="card left">
                         <div class="subhead">
-                          <h4>Facial Treatment</h4>
+                          <h4>Facial Treatment2</h4>
+                          <p>$70</p>
+                        </div>
+                        <p>
+                          A rejuvenating facial to cleanse and hydrate your
+                          skin.
+                        </p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Exfoliation</h4>
+                          <p>$50</p>
+                        </div>
+                        <p>
+                          A treatment to remove dead skin cells and reveal a
+                          fresh complexion.
+                        </p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Mask Treatment</h4>
+                          <p>$40</p>
+                        </div>
+                        <p>Customized masks for various skin types.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Anti-Aging Treatment</h4>
+                          <p>$90</p>
+                        </div>
+                        <p>Specialized treatment to reduce signs of aging.</p>
+                      </div>
+                    </div>
+
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Facial Treatment3</h4>
+                          <p>$70</p>
+                        </div>
+                        <p>
+                          A rejuvenating facial to cleanse and hydrate your
+                          skin.
+                        </p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Exfoliation</h4>
+                          <p>$50</p>
+                        </div>
+                        <p>
+                          A treatment to remove dead skin cells and reveal a
+                          fresh complexion.
+                        </p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Mask Treatment</h4>
+                          <p>$40</p>
+                        </div>
+                        <p>Customized masks for various skin types.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Anti-Aging Treatment</h4>
+                          <p>$90</p>
+                        </div>
+                        <p>Specialized treatment to reduce signs of aging.</p>
+                      </div>
+                    </div>
+
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Facial Treatment4</h4>
                           <p>$70</p>
                         </div>
                         <p>
@@ -652,20 +921,19 @@
                   );
 
                   // Set the first content wrapper as active by default
-                  contentWrappers4[0].classList.add("active");
+                  let activeIndex4 = 0;
+                  contentWrappers4[activeIndex4].classList.add("active");
 
                   leftIcon4.addEventListener("click", () => {
-                    contentWrappers4.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers4[0].classList.add("active");
+                    contentWrappers4[activeIndex4].classList.remove("active");
+                    activeIndex4 = (activeIndex4 - 1 + contentWrappers4.length) % contentWrappers4.length;
+                    contentWrappers4[activeIndex4].classList.add("active");
                   });
 
                   rightIcon4.addEventListener("click", () => {
-                    contentWrappers4.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers4[1].classList.add("active");
+                    contentWrappers4[activeIndex4].classList.remove("active");
+                    activeIndex4 = (activeIndex4 + 1) % contentWrappers4.length;
+                    contentWrappers4[activeIndex4].classList.add("active");
                   });
                 </script>
 
@@ -709,7 +977,75 @@
                     <div class="content-wrapper">
                       <div class="card left">
                         <div class="subhead">
-                          <h4>Deep Cleansing Facial</h4>
+                          <h4>Deep Cleansing Facial 2</h4>
+                          <p>$75</p>
+                        </div>
+                        <p>A thorough cleansing treatment for clear skin.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Hydrating Facial</h4>
+                          <p>$70</p>
+                        </div>
+                        <p>
+                          A facial designed to deeply hydrate and nourish the
+                          skin.
+                        </p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Brightening Facial</h4>
+                          <p>$80</p>
+                        </div>
+                        <p>Facial treatment to enhance skin radiance.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Rejuvenating Facial</h4>
+                          <p>$90</p>
+                        </div>
+                        <p>A treatment to revitalize and refresh tired skin.</p>
+                      </div>
+                    </div>
+
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                            <h4>Deep Cleansing Facial 3</h4>
+                          <p>$75</p>
+                        </div>
+                        <p>A thorough cleansing treatment for clear skin.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Hydrating Facial</h4>
+                          <p>$70</p>
+                        </div>
+                        <p>
+                          A facial designed to deeply hydrate and nourish the
+                          skin.
+                        </p>
+                      </div>
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Brightening Facial</h4>
+                          <p>$80</p>
+                        </div>
+                        <p>Facial treatment to enhance skin radiance.</p>
+                      </div>
+                      <div class="card right">
+                        <div class="subhead">
+                          <h4>Rejuvenating Facial</h4>
+                          <p>$90</p>
+                        </div>
+                        <p>A treatment to revitalize and refresh tired skin.</p>
+                      </div>
+                    </div>
+
+                    <div class="content-wrapper">
+                      <div class="card left">
+                        <div class="subhead">
+                          <h4>Deep Cleansing Facial 4</h4>
                           <p>$75</p>
                         </div>
                         <p>A thorough cleansing treatment for clear skin.</p>
@@ -758,31 +1094,24 @@
                 </div>
 
                 <script>
-                  const leftIcon5 = document.querySelector(
-                    ".facial .left-icon5"
-                  );
-                  const rightIcon5 = document.querySelector(
-                    ".facial .right-icon5"
-                  );
-                  const contentWrappers5 = document.querySelectorAll(
-                    ".facial .content-wrapper"
-                  );
+                  const leftIcon5 = document.querySelector(".facial .left-icon5");
+                  const rightIcon5 = document.querySelector(".facial .right-icon5");
+                  const contentWrappers5 = document.querySelectorAll(".facial .content-wrapper");
 
                   // Set the first content wrapper as active by default
-                  contentWrappers5[0].classList.add("active");
+                  let currentIndex = 0;
+                  contentWrappers5[currentIndex].classList.add("active");
 
                   leftIcon5.addEventListener("click", () => {
-                    contentWrappers5.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers5[0].classList.add("active");
+                    contentWrappers5[currentIndex].classList.remove("active");
+                    currentIndex = (currentIndex - 1 + contentWrappers5.length) % contentWrappers5.length;
+                    contentWrappers5[currentIndex].classList.add("active");
                   });
 
                   rightIcon5.addEventListener("click", () => {
-                    contentWrappers5.forEach((wrapper) => {
-                      wrapper.classList.remove("active");
-                    });
-                    contentWrappers5[1].classList.add("active");
+                    contentWrappers5[currentIndex].classList.remove("active");
+                    currentIndex = (currentIndex + 1) % contentWrappers5.length;
+                    contentWrappers5[currentIndex].classList.add("active");
                   });
                 </script>
               </div>
@@ -909,15 +1238,52 @@
                 });
               </script>
             </div>
+            <style>
+              .locations select {
+                padding: 5px 30px;
+                font-size: 16px;
+                border: 0px solid #00000000;
+                border-radius: 5px;
+                background-color: rgb(0, 0, 0);
+                cursor: pointer;
+                width: auto;
+                font-family: inherit;
+                color: white;
+              }
+  
+              .locations select:hover {
+                border-color: #66666600;
+              }
+  
+              .locations select:focus {
+                outline: none;
+                border-color: #33333300;
+              }
+  
+              .locations select option {
+                padding: 10px;
+                font-size: 16px;
+                color: white;
+              }
+            </style>
             <div class="choose">
               <p>CHOOSE LOCATION</p>
               <div class="buttons">
-                <button
-                  onclick="window.location.href='/booking'"
-                  class="location"
-                >
-                  Missisuaga
-                </button>
+                <div class="locations">
+                  <select id="locationSelect">
+                    <option>Select a Location</option>
+                    <option value="toronto" class="toronto">Toronto</option>
+                    <option value="vancouver" class="vancouver">Vancouver</option>
+                    <option value="montreal" class="montreal">Montreal</option>
+                    <option value="calgary" class="calgary">Calgary</option>
+                    <option value="ottawa" class="ottawa">Ottawa</option>
+                    <option value="edmonton" class="edmonton">Edmonton</option>
+                    <option value="winnipeg" class="winnipeg">Winnipeg</option>
+                    <option value="halifax" class="halifax">Halifax</option>
+                    <option value="quebeccity" class="quebeccity">Quebec City</option>
+                    <option value="victoria" class="victoria">Victoria</option>
+                  </select>
+                </div>
                 <button onclick="window.location.href='/booking'" class="book">
                   BOOK AN APPOINTMENT
                 </button>
@@ -927,7 +1293,7 @@
         </div>
       </section>
     </div>
-
+ 
     <section class="reviews">
       <div class="container">
         <div class="heading">
@@ -1123,6 +1489,7 @@
         </script>
       </div>
     </section>
+
     <!-- 
     <footer>
       <div class="container">

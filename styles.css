@@ -104,8 +104,8 @@ nav {
   max-width: 100vw;
 }
 
-.home nav {
-  height: 150px;
+.home .navs {
+  height: 150px !important;
   width: 100%;
 }
 
@@ -1606,9 +1606,12 @@ text-fill-color: transparent;
   align-items: center;
   justify-content: center;
 
-  padding: 4rem 0 0 0;
+  padding: 4rem 0 8rem 0;
 
   overflow: hidden;
+
+  position: relative;
+  z-index: 100;
 }
 
 .section.works .container {
@@ -1684,7 +1687,7 @@ color: #0C0C0C;
   height: 100%;
   object-fit: contain;
 
-  z-index: 50;
+  z-index: 500;
 
   background-color: #fff;
 }
@@ -1726,7 +1729,7 @@ color: #0C0C0C;
     transform: translateX(-30%);
   }
 }
-
+ 
 
 
 @media only screen and (max-width: 768px) {
@@ -1782,6 +1785,7 @@ color: #0C0C0C;
 }
 
 /* -------------------------------- */
+
 .separator {
   width: 90%;
   height: 1px;
@@ -1801,6 +1805,10 @@ footer {
   justify-content: center;
 
   font-family: "Marcellus SC", serif;
+
+  position: relative;
+
+  z-index: 5;
 }
 
 h2 {

@@ -1,7 +1,7 @@
 body {
   background-color: #fff !important;
 }
-
+ 
 .separator-m {
   background-color: #000 !important;
   width: 90vw;
@@ -10,7 +10,7 @@ body {
   position: relative;
   z-index: 10000000000000;
 }
-
+ 
 @keyframes leftAnimate {
   0% {
     transform: translateX(-100vw);

@@ -114,7 +114,7 @@ body {
   color: #000;
   background-color: #fff !important;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1rem !important;
 
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -225,7 +225,7 @@ body {
   }
 
   .main-franchise .layout .container .column button {
-    font-size: 1rem;
+    font-size: 0.8rem !important;
     width: auto;
   }
 }
@@ -496,6 +496,10 @@ body {
     padding-bottom: 1rem;
   }
 
+  .journey .container .grid .column h3 span{
+    font-size: 0.9rem !important;
+    line-height: normal !important;
+  }
   .journey .container .grid .column .active p {
     height: 200px;
   }

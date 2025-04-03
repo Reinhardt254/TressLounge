@@ -6,14 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/contact/styles.css" />
-
+ 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Aboreto&family=Marcellus+SC&display=swap"
       rel="stylesheet"
     />
-  </head> 
+  </head>  
   <div class="contact-layout">
     <section class="layout">
       <nav>
@@ -89,21 +89,17 @@
       </script>
 
       <div class="underlay">
-        <!-- <div class="white">
-          <p>
-            we offer a premium range of salon and beauty services designed to
-            provide a luxurious and personalized experience.
-          </p>
-        </div> -->
         <div class="cliped"></div>
         <div class="black">
           <p>
             At Tress Lounge Canada, we’re committed to providing a luxury salon
             experience that starts with excellent customer care. Whether you
-            have questions about our services, need appointment details, or
+           have questions about our services, need appointment details, or
             simply want to share feedback, our team is here to help.
           </p>
-        </div>
+        </div> 
+
+        <img src="https://www.tresslounge.ca/wp-content/uploads/2025/04/Group-1000000972.png" alt="">
       </div>
 
       <div class="overlay">
@@ -153,18 +149,70 @@
         </div>
         <div class="location column">
           <h2 class="text-black">CONTACT US THROUGH LOCATION</h2>
-          <div class="card">
+          <style>
+            .locations select {
+              padding: 5px 30px;
+              font-size: 16px;
+              border: 0px solid #00000000;
+              border-radius: 5px;
+              background-color: rgb(0, 0, 0);
+              cursor: pointer;
+              width: auto;
+              font-family: inherit;
+              color: white;
+            }
+
+            .locations select:hover {
+              border-color: #66666600;
+            }
+
+            .locations select:focus {
+              outline: none;
+              border-color: #33333300;
+            }
+
+            .locations select option {
+              padding: 10px;
+              font-size: 16px;
+              color: white;
+            }
+          </style>
+          <div class="locations">
+            <select id="locationSelect">
+              <option>Select a Location</option>
+              <option value="toronto" class="toronto">Toronto</option>
+              <option value="vancouver" class="vancouver">Vancouver</option>
+              <option value="montreal" class="montreal">Montreal</option>
+              <option value="calgary" class="calgary">Calgary</option>
+              <option value="ottawa" class="ottawa">Ottawa</option>
+              <option value="edmonton" class="edmonton">Edmonton</option>
+              <option value="winnipeg" class="winnipeg">Winnipeg</option>
+              <option value="halifax" class="halifax">Halifax</option>
+              <option value="quebeccity" class="quebeccity">Quebec City</option>
+              <option value="victoria" class="victoria">Victoria</option>
+            </select>
+          </div>
+          <style>
+            .card-main{
+              display: none;
+            }
+
+            .card-main.active{
+              display: flex;
+            }
+          </style>
+          <div class="toronto active card card-main">
             <div class="card-content">
               <div class="card-content-left">
                 <h3 class="text-black">Address: </h3>
                 <p>
-                  Address : 8502 Preston Rd. Inglewood, <br />
+                  8502 Preston Rd. Inglewood, 
                   Maine 98380
                 </p>
               </div>
               <div class="card-content-right">
                 <h3 class="text-black">Contact: </h3>
-                <p>Contact : info@la-studioweb.com</p>
+                <p>info@la-studioweb.com</p>
                 <p>(308) 555-0121</p>
   
                 <div class="socials">
@@ -184,15 +232,68 @@
               </div>
             </div>
           </div>
+
+          <div class="vancouver card card-main">
+            <div class="card-content">
+              <div class="card-content-left">
+                <h3 class="text-black">Address: </h3>
+                <p>
+                  8502 Vancouver Rd. Inglewood, <br />
+                  Maine 98380
+                </p>
+              </div>
+              <div class="card-content-right">
+                <h3 class="text-black">Contact: </h3>
+                <p>info@la-studioweb.com</p>
+                <p>(308) 555-0121</p>
+  
+                <div class="socials">
+                  <img
+                    src="https://www.tresslounge.ca/wp-content/uploads/2025/03/Facebook.png"
+                    alt=""
+                  />
+                  <img
+                    src="https://www.tresslounge.ca/wp-content/uploads/2025/03/Instagram.png"
+                    alt=""
+                  />
+                  <img
+                    src="https://www.tresslounge.ca/wp-content/uploads/2025/03/X.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            const locationSelect = document.getElementById('locationSelect');
+            locationSelect.addEventListener("change", (event) => {
+              const locationName = event.target.value;
+              
+              // Remove active class from any previously active card
+              const activeCard = document.querySelector(".card-main.active");
+              if (activeCard) {
+                activeCard.classList.remove("active");
+              }
+              
+              // Add active class to selected location's card
+              if (locationName) {
+                const selectedCard = document.querySelector(`.card-main.${locationName}`);
+                if (selectedCard) {
+                  selectedCard.classList.add("active");
+                }
+              }
+            });
+          </script>
         </div>
       </div>
     </section>
 
-    <section class="map">
+    <!-- <section class="map">
       <img
         src="https://www.tresslounge.ca/wp-content/uploads/2025/04/LOCATION.png"
         alt=""
       />
-    </section>
+    </section> -->
   </div>
 </html>
