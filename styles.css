@@ -186,6 +186,8 @@ nav .column.right .menu ul li a {
     height: auto !important;
     background-color: #000;
 
+    max-height: 80px !important;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -606,17 +608,17 @@ nav .column.right .menu ul li a {
   }
 
   .overlay-home.active {
-    top: -1000% !important;
+    top: -150% !important;
   }
 
   .overtop {
-    top: -1000% !important;
-    transition: 0.8s ease !important;
+    top: -200% !important;
+    transition: 30s ease !important;
   }
 
   .overtop-main {
-    top: -1000% !important;
-    transition: 0.3s ease !important;
+    top: -200% !important;
+    transition: 30s ease !important;
   }
 
   .hero .hero-content .hero-title {
