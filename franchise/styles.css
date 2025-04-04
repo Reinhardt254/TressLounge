@@ -18,7 +18,7 @@ body {
   height: 100%;
  
   overflow: hidden;
-
+ 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +134,7 @@ body {
 
   position: absolute;
   top: 300px;
-  right: 50px;
+  right: 120px;
   rotate: -60deg;
 
   display: flex;
