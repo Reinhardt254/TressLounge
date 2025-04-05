@@ -1157,7 +1157,7 @@ nav {
   justify-content: center;
 
   gap: 0.5rem;
-
+ 
   padding: 0 3rem;
   box-sizing: border-box;
 }
@@ -1165,6 +1165,10 @@ nav {
 .reviews .grid .review-slider .card {
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
+}
+
+.reviews .grid .review-slider .card h3{
+  font-size: 1.2rem !important;
 }
 
 .reviews .grid .review-slider .card p {

@@ -69,6 +69,17 @@ font-weight: 400;
   -webkit-text-fill-color: transparent;
 }
 
+footer h2{
+  background-color: #0c0c0c00 !important;
+  color: #0c0c0c !important;
+  font-family: "Aboreto" !important;
+
+  background: linear-gradient(90deg, #0c0c0c, #0c0c0c, #0c0c0c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 main {
   position: relative;
 }
